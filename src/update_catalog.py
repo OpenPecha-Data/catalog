@@ -15,6 +15,7 @@ def update_catalog():
         for row in csv_reader:
             if row[0][0] == 'P':
                 updated_catalog.append(add_id_url(row))
+            updated_catalog.append(row)
 
     with open(Catalog_fn, 'w') as f:
         csv_writer = csv.writer(f)
