@@ -142,7 +142,7 @@ jobs:
                 response = requests.get(f"https://api.github.com/orgs/Openpecha/repos?page={page_num}&per_page=100", headers=headers)
                 data = response.json()
                 for info in data:
-                    repo_name = info["name"]
+                    repo_name = info.get('name')
                     if len(repo_name) == 32:
                         new_name += nums
                         name = new_name
