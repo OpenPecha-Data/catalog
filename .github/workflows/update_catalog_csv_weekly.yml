@@ -98,18 +98,18 @@ jobs:
                     add_to_catalog.append(pecha_ids)
             return add_to_catalog
 
-        def check_repo_in_github(g, string):
+        def check_repo_in_github(headers, string):
             pecha = re.search(r"\((.*?)\)", string)
             pechaurl = pecha.group(1)
             pecha_id = pechaurl[29:]
-            try:
-                _ = g.get_repo(f"Openpecha/{pecha_id}")
+            response = requests.get(f"https://api.github.com/repos/Openpecha/{pecha_id}", headers=headers)
+            if response.status_code == 200:
                 return None
-            except:
-                print(f"this pecha {pecha_id} has no repository")
+            else:
+                print(f"{pecha_id} has no repository")
                 return pecha_id
                 
-        def get_lines(g,catalog):
+        def get_lines(headers,catalog):
             lines = []
             strings = re.split(r"[\r\n]",catalog)
             for num, string in enumerate(strings, 0):
@@ -117,16 +117,16 @@ jobs:
                     lines.append(string)
                 elif num%2 == 0:
                     if len(string) != 0:
-                        change = check_repo_in_github(g, string)
+                        change = check_repo_in_github(headers, string)
                         if change == None:
                             lines.append(string)
             return lines
 
-        def get_catalog_from_github(g, repo_path):
+        def get_catalog_from_github(g, repo_path, headers):
             repo = g.get_repo(f"Openpecha/catalog")
             content = repo.get_contents(f"data/catalog.csv")
             catalog = content.decoded_content.decode()
-            lines = get_lines(g,catalog)
+            lines = get_lines(headers,catalog)
             with open(f"{repo_path}/data/catalog.csv", "w", encoding='utf-8') as f:
                 for line in lines:
                     f.write(line)
@@ -180,7 +180,7 @@ jobs:
             file_path = './'
             repo_path = download_repo("catalog", file_path)
             repo_names = get_repo_names(headers)
-            get_catalog_from_github(g, repo_path)
+            get_catalog_from_github(g, repo_path, headers)
             pecha_ids = check_repo_names_in_catalog(repo_names, repo_path)
             remove_nonexisted_repos_from_catalog(pecha_ids, repo_path)
             new_catalog = Path(f"{repo_path}/data/catalog.csv").read_text(encoding='utf-8')
