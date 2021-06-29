@@ -1,7 +1,9 @@
 name: update catalog every sunday
+
 on:
   schedule:
     - cron: "*/5 * * * *"
+    
 jobs:
   build:
     name: Update the catalog.csv
@@ -14,7 +16,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: 'python -m pip install --upgrade pip
-        pip install regex PyYAML python-csv requests PyGithub pathlib GitPython jsonlib'
+        pip install regex PyYAML python-csv requests PyGithub pathlib GitPython
+        '
         
     - name: Update the catalog.csv
       env:
@@ -25,7 +28,6 @@ jobs:
         import yaml
         import os
         import csv
-        import json
         from pathlib import Path
         from git import Repo
         from github import Github
