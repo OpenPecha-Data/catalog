@@ -123,12 +123,12 @@ jobs:
                             lines.append(string)
             return lines
 
-        def get_catalog_from_github(g):
+        def get_catalog_from_github(g, repo_path):
             repo = g.get_repo(f"Openpecha/catalog")
             content = repo.get_contents(f"data/catalog.csv")
             catalog = content.decoded_content.decode()
             lines = get_lines(g,catalog)
-            with open(f"./out/list.csv", "w", encoding='utf-8') as f:
+            with open(f"{repo_path}/data/catalog.csv", "w", encoding='utf-8') as f:
                 for line in lines:
                     f.write(line)
                     f.write(f"\n")
@@ -181,7 +181,7 @@ jobs:
             file_path = './'
             repo_path = download_repo("catalog", file_path)
             repo_names = get_repo_names(headers)
-            get_catalog_from_github(g)
+            get_catalog_from_github(g, repo_path)
             pecha_ids = check_repo_names_in_catalog(repo_names, repo_path)
             remove_nonexisted_repos_from_catalog(pecha_ids, repo_path)
             new_catalog = Path(f"{repo_path}/data/catalog.csv").read_text(encoding='utf-8')
