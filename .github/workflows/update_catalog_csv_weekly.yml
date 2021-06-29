@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: "*/10 * * * *"
 jobs:
-  release-project:
+  build:
     name: Update the catalog.csv
     runs-on: ubuntu-latest
     steps:
@@ -14,8 +14,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: 'python -m pip install --upgrade pip
-        pip install regex PyYAML python-csv requests PyGithub pathlib GitPython
-        '
+        pip install regex PyYAML python-csv requests PyGithub pathlib GitPython '
+        
     - name: Update the catalog.csv
       env:
         SECRET: ${{ secrets.GITHUB_TOKEN }}
