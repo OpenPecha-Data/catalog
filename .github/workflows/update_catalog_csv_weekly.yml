@@ -1,6 +1,4 @@
 name: update catalog every sunday
-
-on: [push]
     
 jobs:
   build:
