@@ -1,0 +1,189 @@
+name: update catalog every sunday
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+jobs:
+  release-project:
+    name: Update the catalog.csv
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: 'python -m pip install --upgrade pip
+        pip install regex PyYAML python-csv requests PyGithub pathlib GitPython
+        '
+    - name: Update the catalog.csv
+      env:
+        SECRET: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        import re
+        import requests
+        import yaml
+        import os
+        import csv
+        from pathlib import Path
+        from git import Repo
+        from github import Github
+
+        config = {
+            "OP_ORG": "https://github.com/Openpecha"
+            }
+
+        def update_repo(g, commit_msg, new_content):
+            try:
+                repo = g.get_repo(f"Openpecha/catalog")
+                contents = repo.get_contents(f"./data/catalog.csv", ref="master")
+                repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
+                print(f'catalog update completed..')
+            except:
+                print('Repo not found')
+
+        def get_title_and_work_id(g, pecha_id):
+            try:
+                repo = g.get_repo(f"Openpecha/{pecha_id}")
+                contents = repo.get_contents(f"{pecha_id}.opf/meta.yml")
+                meta_content = contents.decoded_content.decode()
+                metadata = yaml.safe_load(meta_content)
+                work_id = metadata['source_metadata']['id'][4:]
+                title = metadata['source_metadata']['title']
+            except:
+                work_id = None
+                title = None
+            return title, work_id
+
+        def remove_nonexisted_repos_from_catalog(pecha_ids, repo_path):
+            for pecha_id in pecha_ids:
+                if pecha_id == "P000001":
+                    continue
+                elif pecha_id == "P000002":
+                    continue
+                title, work_id = get_title_and_work_id(g, pecha_id)
+                if title == None:
+                    if work_id == None:
+                        row_string = f"[{pecha_id}](https://github.com/OpenPecha/{pecha_id}),,,,\n"
+                    else:
+                        row_string = f"[{pecha_id}](https://github.com/OpenPecha/{pecha_id}),,,,bdr:{work_id}\n"
+                else:
+                    row_string = f"[{pecha_id}](https://github.com/OpenPecha/{pecha_id}),{title},,,bdr:{work_id}\n"
+                print(row_string)
+                with open(f"{repo_path}/data/catalog.csv", "a", encoding='utf-8') as csvfile:
+                    csvfile.write(row_string)
+
+        def check_catalog_for_repo(pecha_id, repo_path):
+            num = 0
+            with open(f"{repo_path}/data/catalog.csv", newline="") as file:
+                pechas = list(csv.reader(file, delimiter=","))
+                for pecha in pechas[3:]:
+                    res = not bool(pecha)
+                    if res == False:
+                        pecha_id_csv = re.search("\[.+\]", pecha[0])[0][1:-1]
+                        if pecha_id == pecha_id_csv:
+                            num += 1
+                            print(f"{pecha_id} is available")
+                            break
+                if num == 0:
+                    print(f"{pecha_id} is not in catalog")
+                    return pecha_id
+            return None
+
+        def check_repo_names_in_catalog(repo_names, repo_path):
+            add_to_catalog = []
+            for num in sorted(repo_names):
+                pecha_id = repo_names[num]['repo']
+                pecha_ids = check_catalog_for_repo(pecha_id, repo_path)
+                if pecha_ids != None:
+                    add_to_catalog.append(pecha_ids)
+            return add_to_catalog
+
+        def check_repo_in_github(g, string):
+            pecha = re.search(r"\((.*?)\)", string)
+            pechaurl = pecha.group(1)
+            pecha_id = pechaurl[29:]
+            try:
+                _ = g.get_repo(f"ta4tsering/{pecha_id}")
+                return None
+            except:
+                print(f"this pecha {pecha_id} has no repository")
+                return pecha_id
+                
+        def get_lines(g,catalog):
+            lines = []
+            strings = re.split(r"[\r\n]",catalog)
+            for num, string in enumerate(strings, 0):
+                if num == 0:
+                    lines.append(string)
+                elif num%2 == 0:
+                    if len(string) != 0:
+                        change = check_repo_in_github(g, string)
+                        if change == None:
+                            lines.append(string)
+            return lines
+
+        def get_catalog_from_github(g):
+            repo = g.get_repo(f"Openpecha/catalog")
+            content = repo.get_contents(f"data/catalog.csv")
+            catalog = content.decoded_content.decode()
+            lines = get_lines(g,catalog)
+            with open(f"./out/list.csv", "w", encoding='utf-8') as f:
+                for line in lines:
+                    f.write(line)
+                    f.write(f"\n")
+
+
+        def get_repo_names(headers):
+            repo_names = {}
+            curr_name = {}
+            new_name = 30000
+            nums = 1
+            for page_num in range(1, 50):
+                response = requests.get(f"https://api.github.com/orgs/Openpecha/repos?page={page_num}&per_page=100", headers=headers)
+                data = response.json()
+                for info in data:
+                    repo_name = info["name"]
+                    if len(repo_name) == 32:
+                        new_name += nums
+                        name = new_name
+                    elif re.search(r"[catalog|hfml|users|ebook-template|nalanda-notes|diplomatic-kanjur]", repo_name):
+                        continue
+                    elif len(repo_name) <= 7 :
+                        name = repo_name[1:]
+                        name = int(name)
+                    curr_name[name]={'repo':repo_name}
+                    repo_names.update(curr_name)
+                    curr_name = {}
+            return repo_names
+
+        def get_branch(repo, branch):
+            if branch in repo.heads:
+                return branch
+            return "master"
+
+        def download_repo(repo_name, out_path=None, branch="master"):
+            pecha_url = f"{config['OP_ORG']}/{repo_name}.git"
+            out_path = Path(out_path)
+            out_path.mkdir(exist_ok=True, parents=True)
+            repo_path = out_path / repo_name
+            Repo.clone_from(pecha_url, str(repo_path))
+            repo = Repo(str(repo_path))
+            branch_to_pull = get_branch(repo, branch)
+            repo.git.checkout(branch_to_pull)
+            return repo_path    
+
+        if __name__ == '__main__':
+            token = os.environ.get('SECRET')
+            g = Github(token)
+            commit_msg = "weekly catalog update done"
+            headers = {"Authorization": f"bearer {token}"}
+            file_path = './'
+            repo_path = download_repo("catalog", file_path)
+            repo_names = get_repo_names(headers)
+            get_catalog_from_github(g)
+            pecha_ids = check_repo_names_in_catalog(repo_names, repo_path)
+            remove_nonexisted_repos_from_catalog(pecha_ids, repo_path)
+            new_catalog = Path(f"{repo_path}/data/catalog.csv").read_text(encoding='utf-8')
+            update_repo(g, commit_msg, new_catalog )
+      shell: python
