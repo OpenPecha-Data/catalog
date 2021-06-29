@@ -143,18 +143,19 @@ jobs:
                 response = requests.get(f"https://api.github.com/orgs/Openpecha/repos?page={page_num}&per_page=100", headers=headers)
                 data = response.json()
                 for info in data:
-                    repo_name = info['name']
-                    if len(repo_name) == 32:
-                        new_name += nums
-                        name = new_name
-                    elif re.search(r"[catalog|hfml|users|ebook-template|nalanda-notes|diplomatic-kanjur]", repo_name):
-                        continue
-                    elif len(repo_name) <= 7 :
-                        name = repo_name[1:]
-                        name = int(name)
-                    curr_name[name]={'repo':repo_name}
-                    repo_names.update(curr_name)
-                    curr_name = {}
+                    if type(info) is dict :
+                        repo_name = info['name']
+                        if len(repo_name) == 32:
+                            new_name += nums
+                            name = new_name
+                        elif re.search(r"[catalog|hfml|users|ebook-template|nalanda-notes|diplomatic-kanjur]", repo_name):
+                            continue
+                        elif len(repo_name) <= 7 :
+                            name = repo_name[1:]
+                            name = int(name)
+                        curr_name[name]={'repo':repo_name}
+                        repo_names.update(curr_name)
+                        curr_name = {}
             return repo_names
 
         def get_branch(repo, branch):
