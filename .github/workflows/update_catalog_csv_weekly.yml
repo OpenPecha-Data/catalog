@@ -1,7 +1,7 @@
 name: update catalog every sunday
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
 jobs:
   build:
     name: Update the catalog.csv
@@ -142,7 +142,7 @@ jobs:
             for page_num in range(1, 50):
                 response = requests.get(f"https://api.github.com/orgs/Openpecha/repos?page={page_num}&per_page=100", headers=headers)
                 data = response.json()
-                for info in data:
+                for _, info in enumerate(data, 0):
                     repo_name = info["name"]
                     if len(repo_name) == 32:
                         new_name += nums
