@@ -77,11 +77,14 @@ jobs:
             lines = []
             repo_list = []
             key_list = []
+            string = "ID,Title,Volume,Author,Source ID"
+            lines.append(string)
             with open(f"{repo_path}/data/catalog.csv", newline="") as file:
                 pechas = list(csv.reader(file, delimiter=","))
-                for key in repo_names:
-                    key_list.append(key)
-                for key in key_list:
+                for num, _ in repo_names.items():
+                    key_list.append(num)
+                repo_key_list = sorted(key_list)
+                for key in repo_key_list:
                     repo_name = repo_names[key]['repo']
                     pecha_avail = False
                     for pecha in pechas[1:]:
