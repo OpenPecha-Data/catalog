@@ -73,12 +73,14 @@ jobs:
                     csvfile.write(row)
 
 
-        def add_repo_names_to_catalog(g,repo_path, repo_names):
+        def add_only_repo_names_to_lines(g,repo_path, repo_names):
             lines = []
             repo_list = []
             with open(f"{repo_path}/data/catalog.csv", newline="") as file:
                 pechas = list(csv.reader(file, delimiter=","))
                 for key in repo_names:
+                    key_list.append(key)
+                for key in repo_list:
                     repo_name = repo_names[key]['repo']
                     pecha_avail = False
                     for pecha in pechas[1:]:
@@ -146,9 +148,9 @@ jobs:
             file_path = './'
             repo_path = download_repo("catalog", file_path)
             repo_names = get_repo_names(headers)
-            lines, repo_list = add_only_repo_names_to_catalog(g, repo_path, repo_names)
-            write_new_catalog(repo_path,lines)
-            add_new_row_to_catalog(g, repo_path, repo_list)
+            catalog_lines, repo_list_to_add = add_only_repo_names_to_lines(g, repo_path, repo_names)
+            write_new_catalog(repo_path,catalog_lines)
+            add_new_row_to_catalog(g, repo_path, repo_list_to_add)
             new_catalog = Path(f"{repo_path}/data/catalog.csv").read_text(encoding='utf-8')
             update_repo(g, commit_msg, new_catalog )
       shell: python
