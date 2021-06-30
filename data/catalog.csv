@@ -39,7 +39,6 @@ ID,Title,Volume,Author,Source ID
 [P000038](https://github.com/OpenPecha/P000038),༄༅། །ལེགས་བཤད་ཀུན་བཟང་མཆོད་སྤྲིན་བཞུགས་སོ།,,ཞབས་དཀར་ཚོགས་དྲུག་རང་གྲོལ།,SHE-SHAP-14
 [P000039](https://github.com/OpenPecha/P000039),༄༅། །ཆོས་མངོན་པ་རྣམ་པར་འབྱེད་པ་ཞེས་བྱ་བའི་བསྟན་བཅོས་བཞུགས་སོ། །,,ཀུན་མཁྱེན་པདྨ་དཀར་པོ།,KS-PK-03
 [P000040](https://github.com/OpenPecha/P000040),༄༅། །སྨན་སྒོམ་གྱི་དྲིས་ལན། གཉིས་ཆོས་ཟུང་འཇུག་གི་ངོ་སྤྲོད་ཞལ་གདམས་བཞུགས་སོ། །,,མཁས་གྲུབ་ཆེན་པོ་རྩེ་ལེ་སྣ་ཚོགས་རང་གྲོལ།,TSD-TSE-12
-[P000041](https://github.com/OpenPecha/P000041),བློ་གྲོས་མཐའ་ཡས་པའི་མཛོད།,དེབ་ཕྲེང་བཞི་པ།,ཀརྨ་བློ་གྲོས་འོད་ཟེར།,RDI-SS-04
 [P000042](https://github.com/OpenPecha/P000042),༄༅། །ཚད་མ་མདོ་དང་སྡེ་བདུན་གྱི་དོན་གཏན་ལ་ཕབ་པའི་བསྟན་བཅོས་རྗེ་བཙུན་འཇམ་པའི་དབྱངས་ཀྱི་དགོངས་རྒྱན་བཞུགས་སོ། །,,ཀུན་མཁྱེན་པདྨ་དཀར་པོ།,KS-PK-02
 [P000043](https://github.com/OpenPecha/P000043),༄༅། སྔ་འགྱུར་བཀའ་གཏེར་ཤིང་རྟའི་ལམ་སྲོལ་ཆོས་ཀྱི་རྒྱལ་པོ་སྨིན་གླིང་པའི་བསྟན་པ་རྒྱས་པའི་སྨོན་ལམ་རྡོ་རྗེའི་གསུང་གི་འགྲེལ་པ་དགེ་མཚན་ལྷ་ཡི་རྔ་ཆེན་ཞེས་བྱ་བ་བཞུགས་སོ། །,,༧སྐྱབས་རྗེ་དིལ་མགོ་མཁྱེན་བཙེ་རིན་པོ་ཆེ།,SHE-DKR-15
 [P000044](https://github.com/OpenPecha/P000044),བློ་གྲོས་མཐའ་ཡས་པའི་མཛོད།,དེབ་ཕྲེང་བཅུ་དྲུག་པ་།,རྨ་བྱ་བ་བྱང་ཆུབ་བརྩོན་འགྲུས།,RDI-SS-16-2
@@ -775,6 +774,24 @@ ID,Title,Volume,Author,Source ID
 [P000775](https://github.com/OpenPecha/P000775),རྒྱ་བོད་ཤན་སྦྱར་གྱི་སྐྱེ་དངོས་རིག་པའི་ཚིག་མཛོད།,,,bdr:W8LS18640
 [P000776](https://github.com/OpenPecha/P000776),ཟང་ཟུ་ཝེན་ཧུཨ་ཡུ་ཀང་བ་ཕེ༹ང་qཨིང,,,bdr:W00EGS1017690
 [P000777](https://github.com/OpenPecha/P000777),བྱང་ཆུབ་བདེ་ལམ་གྱི་ཟིན་བྲིས་ཡང་གསལ་སྒྲོན་མེ,,,bdr:W2CZ8068
+[P000790](https://github.com/OpenPecha/P000790),འབྲས་སྤུངས་དགོན་དུ་བཞུགས་སུ་གསོལ་བའི་དཔེ་རྙིང་དཀར་ཆག,,,bdr:W28949
+[P000801](https://github.com/OpenPecha/P000801),ལོ་པན་གྱི་རྣམ་ཐར་ཕྱོགས་བསྒྲིགས།,,,bdr:W3CN21836
+[P000803](https://github.com/OpenPecha/P000803),འབྲི་གུང་ཚོགས་ཆོས་ཆེན་མོ།,,,RCP-01
+[P000804](https://github.com/OpenPecha/P000804),བསྟན་འགྱུར ༼སྡེ་དགེ༽,,,bdr:W23703
+[P000805](https://github.com/OpenPecha/P000805),ཐོབ་ཡིག་བུམ་པ་བཟང་པོ,,,bdr:W1GS105195
+[P000806](https://github.com/OpenPecha/P000806),རྙིང་མ་རྒྱུད་འབུམ། (སྡེ་དགེ་པར་མ།),,,bdr:W21939
+[P000808](https://github.com/OpenPecha/P000808),མི་ཉག་འཇམ་དབྱངས་གྲགས་པའི་རང་རྣམ།,,,bdr:W30416
+[P000809](https://github.com/OpenPecha/P000809),ཨར་བྱང་ཆུབ་ཡེ་ཤེས་ཀྱི་གསུང་ཆོས་སྐོར,,,bdr:W2DB4582
+[P000810](https://github.com/OpenPecha/P000810),རྩ་ཤེས་ཀྱི་ཊཱི་ཀ་དང་ཚིག་གསལ་གྱི་དཀའ་གནད་དང་སྤྱི་སྡོམ།,,,bdr:W3CN3438
+[P000811](https://github.com/OpenPecha/P000811),གསུང་འབུམ། མཁྱེན་བརྩེའི་དབང་པོ།,,,bdr:W3PD1002
+[P000812](https://github.com/OpenPecha/P000812),གསུང་ཐོར་བུ། བློ་ལྡན་ཤེས་རབ།,,,bdr:W3CN18534
+[P000813](https://github.com/OpenPecha/P000813),གསུང་འབུམ། བཅོམ་ལྡན་རིག་པའི་རལ་གྲི་,,,bdr:W1KG4324
+[P000814](https://github.com/OpenPecha/P000814),གྲོ་ལུང་པ་བློ་གྲོས་འབྱུང་གནས་ཀྱི་གསུང་ཆོས་སྐོར,,,bdr:W1PD104698
+[P000817](https://github.com/OpenPecha/P000817),ཏུན་ཧོང་ཤོག་ཧྲིལ་ཡིག་རྙིང་གི་བཤུས་ཡིག་ཕྱོགས་བསྒྲིགས།,,,bdr:W3CN7000
+[P000818](https://github.com/OpenPecha/P000818),ཧྥ་རན་སིར་ཉར་བའི་ཏུན་ཧོང་ཡིག་རྙིང་ཤོག་དྲིལ་བཤུས་ཡིག་ཕྱོགས་བསྒྲིགས། དེབ་དང་པོ,,,bdr:W8LS20272
+[P000821](https://github.com/OpenPecha/P000821),གསུང་འབུམ། མཁྱེན་བརྩེའི་དབང་པོ།,,,bdr:W21807
+[P000822](https://github.com/OpenPecha/P000822),test,,,test
+[P000823](https://github.com/OpenPecha/P000823),རྒྱལ་བའི་བསྟན་འགྱུར་ལྷ་ས་དཔར་མའི་དཀར་ཆག,,,bdr:W3CN4863
 [P001651](https://github.com/OpenPecha/P001651),ལྕང་སྐྱ་རོལ་པའི་རྡོ་རྗེའི་རྣམ་ཐར་སྙན་ངག་ཚིགས་བཅད་ཕྱོགས་བསྒྲིགས།,,,bdr:W4CZ74357
 [P001652](https://github.com/OpenPecha/P001652),དཔྱད་རྩོམ།,,,bdr:W1AC354
 [P001653](https://github.com/OpenPecha/P001653),པདྨ་འོད་འབར་གྱི་རྣམ་ཐར།,,,bdr:W1KG21753
@@ -4279,26 +4296,6 @@ ID,Title,Volume,Author,Source ID
 [P010801](https://github.com/OpenPecha/P010801),ཤེར་ཕྱིན་བརྒྱད་སྟོང་པའི་བཤད་པ་མངོན་རྟོགས་རྒྱན་གྱི་སྣང་བ།,,,bdr:W3CN4869
 [P010802](https://github.com/OpenPecha/P010802),དྲིན་ལན་བསབ་པའི་མདོ།,,,bdr:W3CN8173
 [P010803](https://github.com/OpenPecha/P010803),དཔལ་ཀྱེ་རྡོ་རྗེའི་རྒྱུད་ཀྱི་བཤད་པ་བཀའི་བརྒྱ་པ་རིན་པོ་ཆེ་ལ་གསོལ་བ་འདེབས་པ,,,bdr:W29902
-[P000790](https://github.com/OpenPecha/P000790),འབྲས་སྤུངས་དགོན་དུ་བཞུགས་སུ་གསོལ་བའི་དཔེ་རྙིང་དཀར་ཆག,,,bdr:W28949
-[P000804](https://github.com/OpenPecha/P000804),བསྟན་འགྱུར ༼སྡེ་དགེ༽,,,bdr:W23703
-[P000803](https://github.com/OpenPecha/P000803),འབྲི་གུང་ཚོགས་ཆོས་ཆེན་མོ།,,,RCP-01
-[P000804](https://github.com/OpenPecha/P000804),འབྲི་གུང་ཚོགས་ཆོས་ཆེན་མོ།,,,འབྲི་གུང་ཚོགས་ཆོས་ཆེན་མོ།
-[P000801](https://github.com/OpenPecha/P000801),ལོ་པན་གྱི་རྣམ་ཐར་ཕྱོགས་བསྒྲིགས།,,,bdr:W3CN21836
-[P000803](https://github.com/OpenPecha/P000803),ཏུན་ཧོང་ཡིག་ཚང་ཁྲོད་ཀྱི་ས་ལུ་ལྗང་པ་དང་རྡོ་རྗེ་གཅོད་པའི་མཆན་འགྲེལ།,,,bdr:W3CN22346
-[P000804](https://github.com/OpenPecha/P000804),རྔོག་སློབ་བརྒྱུད་དང་བཅས་པའི་གསུང་འབུམ།,,,bdr:W1KG16666
-[P000805](https://github.com/OpenPecha/P000805),ཐོབ་ཡིག་བུམ་པ་བཟང་པོ,,,bdr:W1GS105195
-[P000808](https://github.com/OpenPecha/P000808),མི་ཉག་འཇམ་དབྱངས་གྲགས་པའི་རང་རྣམ།,,,bdr:W30416
-[P000809](https://github.com/OpenPecha/P000809),ཨར་བྱང་ཆུབ་ཡེ་ཤེས་ཀྱི་གསུང་ཆོས་སྐོར,,,bdr:W2DB4582
-[P000810](https://github.com/OpenPecha/P000810),རྩ་ཤེས་ཀྱི་ཊཱི་ཀ་དང་ཚིག་གསལ་གྱི་དཀའ་གནད་དང་སྤྱི་སྡོམ།,,,bdr:W3CN3438
-[P000806](https://github.com/OpenPecha/P000806),རྙིང་མ་རྒྱུད་འབུམ། (སྡེ་དགེ་པར་མ།),,,bdr:W21939
-[P000813](https://github.com/OpenPecha/P000813),གསུང་འབུམ། བཅོམ་ལྡན་རིག་པའི་རལ་གྲི་,,,bdr:W1KG4324
-[P000814](https://github.com/OpenPecha/P000814),གྲོ་ལུང་པ་བློ་གྲོས་འབྱུང་གནས་ཀྱི་གསུང་ཆོས་སྐོར,,,bdr:W1PD104698
-[P000811](https://github.com/OpenPecha/P000811),གསུང་འབུམ། མཁྱེན་བརྩེའི་དབང་པོ།,,,bdr:W3PD1002
-[P000812](https://github.com/OpenPecha/P000812),གསུང་ཐོར་བུ། བློ་ལྡན་ཤེས་རབ།,,,bdr:W3CN18534
-[P000817](https://github.com/OpenPecha/P000817),ཏུན་ཧོང་ཤོག་ཧྲིལ་ཡིག་རྙིང་གི་བཤུས་ཡིག་ཕྱོགས་བསྒྲིགས།,,,bdr:W3CN7000
-[P000818](https://github.com/OpenPecha/P000818),ཧྥ་རན་སིར་ཉར་བའི་ཏུན་ཧོང་ཡིག་རྙིང་ཤོག་དྲིལ་བཤུས་ཡིག་ཕྱོགས་བསྒྲིགས། དེབ་དང་པོ,,,bdr:W8LS20272
-[P000821](https://github.com/OpenPecha/P000821),གསུང་འབུམ། མཁྱེན་བརྩེའི་དབང་པོ།,,,bdr:W21807
-[036032039af341a5af4f8998052e7c86](https://github.com/OpenPecha/036032039af341a5af4f8998052e7c86),qwerwqer,,,wer1234
 [6b7cc9304415483c859e19e890139dd4](https://github.com/OpenPecha/6b7cc9304415483c859e19e890139dd4),test,,,test
 [dbbad24dd5244915ad979169156daaa8](https://github.com/OpenPecha/dbbad24dd5244915ad979169156daaa8),test,,,test
 [b81190ea93bf4a979974c5e7f67a510f](https://github.com/OpenPecha/b81190ea93bf4a979974c5e7f67a510f),test,,,test
@@ -4306,51 +4303,54 @@ ID,Title,Volume,Author,Source ID
 [6120aaf163c24a589fb9ebbd4e1090ee](https://github.com/OpenPecha/6120aaf163c24a589fb9ebbd4e1090ee),test,,,test
 [0fff821899534ad38367173a8855dd48](https://github.com/OpenPecha/0fff821899534ad38367173a8855dd48),test,,,test
 [b66d0e40086c49cfb5e3e545b14b5644](https://github.com/OpenPecha/b66d0e40086c49cfb5e3e545b14b5644),test,,,q23423
-[P000822](https://github.com/OpenPecha/P000822),test,,,test
 [9266fdb67bb34ecc939ccd55142f3306](https://github.com/OpenPecha/9266fdb67bb34ecc939ccd55142f3306),test,,,test
 [87f4aa62ece7483d96150e9f243076a4](https://github.com/OpenPecha/87f4aa62ece7483d96150e9f243076a4),test,,,test
 [386265d79a9b4cad9c1de84bb961e317](https://github.com/OpenPecha/386265d79a9b4cad9c1de84bb961e317),test,,,test
-[33fda8a9904d4bbe802df5be30a51149](https://github.com/OpenPecha/33fda8a9904d4bbe802df5be30a51149),test,,,test
-[6f372737b98d49b9adcb25f454957dc9](https://github.com/OpenPecha/6f372737b98d49b9adcb25f454957dc9),test,,,test
-[4ce5b1e823ee418ba6d047c93e03114c](https://github.com/OpenPecha/4ce5b1e823ee418ba6d047c93e03114c),test,,,test
 [9041d02e010042b8a09c9e41924f1fc8](https://github.com/OpenPecha/9041d02e010042b8a09c9e41924f1fc8),test,test,,test
-[72f8cf96405a42ee9042664e139509c7](https://github.com/OpenPecha/72f8cf96405a42ee9042664e139509c7),Test,Test,,Test
-[421a2ab7616342c0b3912971144486ea](https://github.com/OpenPecha/421a2ab7616342c0b3912971144486ea),Title,TItle,,RCP-01
 [03f9b65abd7e4810b16e11e6f05c4291](https://github.com/OpenPecha/03f9b65abd7e4810b16e11e6f05c4291),Tsadra test,Tsadra test,,test
-[7c59ff366f9040d481e0fb9b23a0d39b](https://github.com/OpenPecha/7c59ff366f9040d481e0fb9b23a0d39b),དསཕ༹སྡཕ༹,དཕ༹དཕ༹,,12345
-[e7469780bbe14d77991de62b796e3355](https://github.com/OpenPecha/e7469780bbe14d77991de62b796e3355),ཀཀཀཀ,ཀཀཀཀདཀདཀད,,P001
-[667fc3a6d5c34d1fb3e0c8b187b52289](https://github.com/OpenPecha/667fc3a6d5c34d1fb3e0c8b187b52289),ཀཀཀཀ,ཀཀཀཀདཀདཀད,,P001
-[P000823](https://github.com/OpenPecha/P000823),རྒྱལ་བའི་བསྟན་འགྱུར་ལྷ་ས་དཔར་མའི་དཀར་ཆག,,,bdr:W3CN4863
 [db838c91e6c64b78a532104f2c7f16b5](https://github.com/OpenPecha/db838c91e6c64b78a532104f2c7f16b5),test,test,,test
-[6e87930af8364cfc914da2559421fa5b](https://github.com/OpenPecha/6e87930af8364cfc914da2559421fa5b),༄༅། །རྗེ་བཙུན་བླ་མ་ཙོང་ཁ་པ་ཆེན་པོའི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་རྣམ་པར་ཐར་པ་དད་པའི་འཇུག་ངོགས་ཞེས་བྱ་བ་བཞུགས་སོ།། ,རྗེ་བཙུན་ཙོང་ཁ་པའི་རྣམ་ཐར་ཕྱོགས་བསྡུ་བཞུགས་སོ།།,,TSD-GS-01
-[4eeb51c3268147b6a26b2829d926426d](https://github.com/OpenPecha/4eeb51c3268147b6a26b2829d926426d),༄༅། །རྗེ་བཙུན་བླ་མ་ཙོང་ཁ་པ་ཆེན་པོའི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་རྣམ་པར་ཐར་པ་དད་པའི་འཇུག་ངོགས་ཞེས་བྱ་བ་བཞུགས་སོ།། ,,,TSD-GS-01
-[63457b37cd554d15b2540280c5703e77](https://github.com/OpenPecha/63457b37cd554d15b2540280c5703e77),༄༅། །དགེ་ཚུལ་གྱི་བསླབ་བྱ་གནམ་རྩེང་ལྡེང་མ་བཞུགས།།,,,TSD-GS-02
 [1e3ba083d9f8415388ee1ad8e8ecaec3](https://github.com/OpenPecha/1e3ba083d9f8415388ee1ad8e8ecaec3),༄༅། །དགེ་ཚུལ་གྱི་བསླབ་བྱ་གནམ་རྩེང་ལྡེང་མ་བཞུགས་སོ།།,,,TSD-GS-02
-[d511d19ddba442c5aff8cdcb23be4166](https://github.com/OpenPecha/d511d19ddba442c5aff8cdcb23be4166),test,,,test
-[2051ea563adb4a5e93bb6be8d63a2bec](https://github.com/OpenPecha/2051ea563adb4a5e93bb6be8d63a2bec),test,,,test
-[a64dd35127d74e81ac43666a34264143](https://github.com/OpenPecha/a64dd35127d74e81ac43666a34264143),aaaa,,,aaaa
-[65794430cac44e1686c73a5fe1a53bac](https://github.com/OpenPecha/65794430cac44e1686c73a5fe1a53bac),test,,,test
-[5d5feb84cac041a1b2ddbdf55cf11ae8](https://github.com/OpenPecha/5d5feb84cac041a1b2ddbdf55cf11ae8),test,,,test
-[478260061afd4533ad632947a40c73d2](https://github.com/OpenPecha/478260061afd4533ad632947a40c73d2),test,,,test
-[58e36a7138f846e89ab500dc35af2a91](https://github.com/OpenPecha/58e36a7138f846e89ab500dc35af2a91),test,,,test
-[08e3bd9ab62b4592b70ab3dac805ff18](https://github.com/OpenPecha/08e3bd9ab62b4592b70ab3dac805ff18),test,,,test
-[fea7c343e9e94379841896a5f7005268](https://github.com/OpenPecha/fea7c343e9e94379841896a5f7005268),test,,,test
-[d5ff43e380a948a09e798c89f493d91f](https://github.com/OpenPecha/d5ff43e380a948a09e798c89f493d91f),test,,,test
 [82fd6d077df141628cd7f638b57c70c5](https://github.com/OpenPecha/82fd6d077df141628cd7f638b57c70c5),༄༅། །དགེ་སློང་གི་བསླབ་བྱ་གནམ་རྩེང་ལྡེང་མར་གྲགས་པ་བཞུགས་སོ།།,,,TSD-GS-03
 [87a9634ac8e246f8b4468df3184a83d9](https://github.com/OpenPecha/87a9634ac8e246f8b4468df3184a83d9),༄༅། །བྱང་ཆུབ་སེམས་དཔའི་ཚུལ་ཁྲིམས་ཀྱི་རྣམ་བཤད་བྱང་ཆུབ་གཞུང་ལམ་བཞུགས་སོ།།,,,TSD-GS-04
 [6972e2b4759a4667b7e801ffca7617ee](https://github.com/OpenPecha/6972e2b4759a4667b7e801ffca7617ee),༄༅། །གསང་སྔགས་ཀྱི་ཚུལ་ཁྲིམས་ཀྱི་རྣམ་བཤད་དངོས་གྲུབ་ཀྱི་སྙེ་མ་ཞེས་བྱ་བ་བཞུགས་སོ།།,,,TSD-GS-05
-[ac572e98c43346a99007aae62fce4564](https://github.com/OpenPecha/ac572e98c43346a99007aae62fce4564),༄༅། །གསང་སྔགས་ཀྱི་ཚུལ་ཁྲིམས་ཀྱི་རྣམ་བཤད་དངོས་གྲུབ་ཀྱི་སྙེ་མ་ཞེས་བྱ་བ་བཞུགས་སོ།།,,,TSD-GS-05
-[35fe85e2ed3a40ea9fe7a74e60662f20](https://github.com/OpenPecha/35fe85e2ed3a40ea9fe7a74e60662f20),test,,,test
 [e52e0d9872dd4ffcbc06423deafa401e](https://github.com/OpenPecha/e52e0d9872dd4ffcbc06423deafa401e),༄༅། །གསང་སྔགས་ཀྱི་ཚུལ་ཁྲིམས་ཀྱི་རྣམ་བཤད་དངོས་གྲུབ་ཀྱི་སྙེ་མ་ཞེས་བྱ་བ་བཞུགས་སོ།།,,,dfadf
 [609e252125b647dfa9c530704cca6519](https://github.com/OpenPecha/609e252125b647dfa9c530704cca6519),test,,,test
 [093a991fe6354051a0d39c1649f95745](https://github.com/OpenPecha/093a991fe6354051a0d39c1649f95745),༄༅། །བླ་མ་ལྔ་བཅུ་པའི་རྣམ་བཤད་སློབ་མའི་རེ་བ་ཀུན་སྐོང་ཞེས་བྱ་བ་བཞུགས་སོ།།,,,TSD-GS-06
 [058d6844a0724916920a4988894d6605](https://github.com/OpenPecha/058d6844a0724916920a4988894d6605),test,,,test
-[e8e59375f79240768c8ed2565b2512d0](https://github.com/OpenPecha/e8e59375f79240768c8ed2565b2512d0),test,,,test
 [8671c398ca0449358176febb9d97e6a9](https://github.com/OpenPecha/8671c398ca0449358176febb9d97e6a9),test,,,test
 [41067aa3ae424270bc79f107b7677f67](https://github.com/OpenPecha/41067aa3ae424270bc79f107b7677f67),རྗེ་བཙུན་ཙོང་ཁ་པའི་རྣམ་ཐར་ཕྱོགས་བསྡུ་བཞུགས་སོ།།,,,TSD-GS-01
-[f7f4278b0c0646669d8a68c19c9607fb](https://github.com/OpenPecha/f7f4278b0c0646669d8a68c19c9607fb),test,,,test
 [19f361c884014c5a96e52f8bded3d366](https://github.com/OpenPecha/19f361c884014c5a96e52f8bded3d366),test,,,tt
 [602ef053ce47421483e97a56192e260b](https://github.com/OpenPecha/602ef053ce47421483e97a56192e260b),test,,,test
 [1e0862064425475895900563349ac16b](https://github.com/OpenPecha/1e0862064425475895900563349ac16b),test,,,test
-[2b3afae73aec49ea82898c99db248543](https://github.com/OpenPecha/2b3afae73aec49ea82898c99db248543),test,,,test
 [b0297c109ca148799b771fd3c63a590b](https://github.com/OpenPecha/b0297c109ca148799b771fd3c63a590b),test,,,test
+[P000778](https://github.com/OpenPecha/P000778),,,,
+[P000779](https://github.com/OpenPecha/P000779),,,,
+[P000780](https://github.com/OpenPecha/P000780),,,,
+[P000781](https://github.com/OpenPecha/P000781),,,,
+[P000782](https://github.com/OpenPecha/P000782),,,,
+[P000783](https://github.com/OpenPecha/P000783),,,,
+[P000784](https://github.com/OpenPecha/P000784),,,,
+[P000785](https://github.com/OpenPecha/P000785),,,,
+[P000786](https://github.com/OpenPecha/P000786),,,,
+[P000787](https://github.com/OpenPecha/P000787),,,,bdr:403
+[P000788](https://github.com/OpenPecha/P000788),,,,
+[P000789](https://github.com/OpenPecha/P000789),,,,
+[P000791](https://github.com/OpenPecha/P000791),བསྟན་འགྱུར། ༼དཔེ་བསྡུར་མ༽,,,bdr:W1PD95844
+[P000792](https://github.com/OpenPecha/P000792),,,,
+[P000793](https://github.com/OpenPecha/P000793),,,,
+[P000794](https://github.com/OpenPecha/P000794),གསུང་འབུམ། ཆོས་ཀྱི་བློ་གྲོས།,,,bdr:W1KG14303
+[P000795](https://github.com/OpenPecha/P000795),རས་ཆུང་སྙན་བརྒྱུད་སྐོར། ,,,bdr:W1AC375
+[P000796](https://github.com/OpenPecha/P000796),,,,
+[P000797](https://github.com/OpenPecha/P000797),,,,
+[P000799](https://github.com/OpenPecha/P000799),རྒྱ་བོད་བཀའ་བསྟན་དཀར་ཆག་བསྡུར་ཞིབ།,,,bdr:W3CN25664
+[P000800](https://github.com/OpenPecha/P000800),བསྟན་འགྱུར ༼སྡེ་དགེ༽,,,bdr:W23703
+[P000802](https://github.com/OpenPecha/P000802),བསྟན་འགྱུར ༼སྣར་ཐང༽,,,bdr:W22704
+[P000807](https://github.com/OpenPecha/P000807),qwer,,,bdr:3
+[P000815](https://github.com/OpenPecha/P000815),Tsadra-test,,,bdr:TSD-01
+[P000816](https://github.com/OpenPecha/P000816),test,,,bdr:01
+[P000819](https://github.com/OpenPecha/P000819),test,,,bdr:01
+[P000820](https://github.com/OpenPecha/P000820),Test,,,bdr:01
+[P000824](https://github.com/OpenPecha/P000824),,,,bdr:
+[P010804](https://github.com/OpenPecha/P010804),ཁེད,,,bdr:W2DB25437
+[12d32eb31c1a4cc59741cda99ebc7211](https://github.com/OpenPecha/12d32eb31c1a4cc59741cda99ebc7211),,,,
+[187ed94f85154ea5b1ac374a651e1770](https://github.com/OpenPecha/187ed94f85154ea5b1ac374a651e1770),,,,
