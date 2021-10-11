@@ -1,3 +1,5 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [Sales Pipeline](README.md)
+* [Tier A Customers](tier-a-customers.md)
+* [Tier B Customers](tier-b-customers.md)
