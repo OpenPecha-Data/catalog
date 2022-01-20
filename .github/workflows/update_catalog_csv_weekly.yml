@@ -1,6 +1,8 @@
 name: update catalog every sunday
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 0 * * SUN'
     
 jobs:
   build:
@@ -92,11 +94,9 @@ jobs:
                             pecha_id = re.search("\[.+\]", pecha[0])[0][1:-1]
                             if pecha_id == repo_name:
                                 lines.append(row)
-                                print(f"{pecha_id} has repo")
                                 pecha_avail = True
                                 break
                     if pecha_avail == False:
-                        print(f"{repo_name} repo is added to the catalog")
                         repo_list.append(repo_name)
             return lines, repo_list
 
