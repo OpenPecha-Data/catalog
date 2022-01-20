@@ -142,11 +142,10 @@ jobs:
             token = os.environ.get('SECRET')
             g = Github(token)
             commit_msg = "weekly catalog update done"
-            headers = {"Authorization": f"bearer {token}"}
             file_path = './'
             repo_path = download_repo("catalog", file_path)
             repo_names = get_repo_names(g)
-            catalog_lines, repo_list_to_add = add_only_repo_names_to_lines(g, repo_path, repo_names)
+            catalog_lines, repo_list_to_add = add_only_repo_names_to_lines(repo_path, repo_names)
             write_new_catalog(repo_path,catalog_lines)
             add_new_row_to_catalog(g, repo_path, repo_list_to_add)
             new_catalog = Path(f"{repo_path}/data/catalog.csv").read_text(encoding='utf-8')
