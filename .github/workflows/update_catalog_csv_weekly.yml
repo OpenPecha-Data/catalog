@@ -33,13 +33,13 @@ jobs:
             }
 
         def update_repo(g, commit_msg, new_content):
-        try:
-            repo = g.get_repo(f"Openpecha/catalog")
-            contents = repo.get_contents(f"./data/catalog.csv", ref="main")
-            repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
-            print(f'catalog update completed..')
-        except:
-            print('Repo not found')
+            try:
+                repo = g.get_repo(f"Openpecha/catalog")
+                contents = repo.get_contents(f"./data/catalog.csv", ref="main")
+                repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
+                print(f'catalog update completed..')
+            except:
+                print('Repo not found')
 
 
         def write_new_catalog(repo_path, lines):
