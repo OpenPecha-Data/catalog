@@ -37,7 +37,7 @@ jobs:
                 repo = g.get_repo(f"Openpecha/catalog")
                 contents = repo.get_contents(f"./data/catalog.csv", ref="master")
                 repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
-                print(f'catalog update completed..')
+                print(f'catalog weekly update completed..')
             except:
                 print('Repo not found')
 
