@@ -35,7 +35,7 @@ jobs:
         def update_repo(g, commit_msg, new_content):
             try:
                 repo = g.get_repo(f"Openpecha/catalog")
-                contents = repo.get_contents(f"./data/catalog.csv", ref="master")
+                contents = repo.get_contents(f"/data/catalog.csv", ref="master")
                 repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
                 print(f'catalog weekly update completed..')
             except:
