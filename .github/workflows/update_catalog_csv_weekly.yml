@@ -39,7 +39,7 @@ jobs:
                 repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
                 print(f'catalog weekly update completed..')
             except:
-                print('Repo not found')
+                print('catalog repo not found')
 
 
         def write_new_catalog(repo_path, lines):
