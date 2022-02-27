@@ -66,12 +66,12 @@ jobs:
             repo.remote().set_url(authed_remote_url)
 
 
-            def write_new_catalog(repo_path, lines):
-                first_row = f"ID,Title,Volume,Author,Source ID\n"
-                with open(f"{repo_path}/data/catalog.csv", 'w') as csvfile:
-                    csvfile.write(first_row)
-                    writer = csv.writer(csvfile)    
-                    writer.writerows(lines)
+        def write_new_catalog(repo_path, lines):
+            first_row = f"ID,Title,Volume,Author,Source ID\n"
+            with open(f"{repo_path}/data/catalog.csv", 'w') as csvfile:
+                csvfile.write(first_row)
+                writer = csv.writer(csvfile)    
+                writer.writerows(lines)
 
 
         def add_new_row_to_catalog(g, repo_path,repo_list):
