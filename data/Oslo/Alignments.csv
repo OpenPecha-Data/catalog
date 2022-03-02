@@ -1,89 +1,68 @@
 id,pecha name,url
-A0A027D0B,Akṣayamatinirdeśa,https://github.com/OpenPecha/A0A027D0B
-A98840190,Aṣṭasāhasrikā Prajñāpāramitā,https://github.com/OpenPecha/A98840190
-A73BE4893,Bhaiṣajyagurupūrvapraṇidhānasūtra,https://github.com/OpenPecha/A73BE4893
-AFEB64B81,Bodhisatvapiṭaka,https://github.com/OpenPecha/AFEB64B81
-A35E8646B,Brahmaśrīvyākaraṇa,https://github.com/OpenPecha/A35E8646B
-AAB04949C,BA: Proto-BA (Buddhanāmanirdeśa),https://github.com/OpenPecha/AAB04949C
-AEFFCFB11,BA: Daśabhūmikasūtra,https://github.com/OpenPecha/AEFFCFB11
-A54A11038,Dīrghāgama, sūtras no. 35-41,https://github.com/OpenPecha/A54A11038
-A465C64C9,Drāmiḍāvidyārājā,https://github.com/OpenPecha/A465C64C9
-AD3342514,Gaganagañjaparipṛcchā,https://github.com/OpenPecha/AD3342514
-A04994B34,BA: Gaṇḍavyūhasūtra,https://github.com/OpenPecha/A04994B34
-A9BF422CB,Gaṅgottaraparipṛcchā,https://github.com/OpenPecha/A9BF422CB
-AF2CAC09E,Khaḍgaviṣāṇasūtra,https://github.com/OpenPecha/AF2CAC09E
-A288C85B8,Laṅkāvatārasūtra,https://github.com/OpenPecha/A288C85B8
-AEF033BF6,Maitreyavyākaraṇa,https://github.com/OpenPecha/AEF033BF6
-AF8F6EC8D,Nirvikalpapraveśadhāraṇī,https://github.com/OpenPecha/AF8F6EC8D
-A4F9C5359,Prajñāpāramitāhṛdayasūtra,https://github.com/OpenPecha/A4F9C5359
-A1F0A4D09,Pratyutpannabuddhasamādhisūtra,https://github.com/OpenPecha/A1F0A4D09
-A16D37675,Ratnaguṇasaṃcayagāthā,https://github.com/OpenPecha/A16D37675
-AA12EEAD8,Saddharmapuṇḍarīka,https://github.com/OpenPecha/AA12EEAD8
-AEC9BFBAA,Vajracchedikā Prajñāpāramitā,https://github.com/OpenPecha/AEC9BFBAA
-A6923A699,Vimalakīrtinirdeśa,https://github.com/OpenPecha/A6923A699
-AD7E2FB4B,BA: Proto-BA (Buddhanāmanirdeśa),https://github.com/OpenPecha/AD7E2FB4B
-A0B50B36B,BA: Daśabhūmikasūtra,https://github.com/OpenPecha/A0B50B36B
-A5D2229E5,BA: Gaṇḍavyūhasūtra,https://github.com/OpenPecha/A5D2229E5
-A9033B74A,MSV 1,00: Vinayavastūddāna,https://github.com/OpenPecha/A9033B74A
-ABE39008A,MSV 1,01: Pravrajyāvastu,https://github.com/OpenPecha/ABE39008A
-AE68C3B8C,MSV 1,02: Poṣadhavastu,https://github.com/OpenPecha/AE68C3B8C
-A14519F13,MSV 1,03: Pravāraṇāvastu,https://github.com/OpenPecha/A14519F13
-AF8DA5DC8,MSV 1,04: Varṣāvastu,https://github.com/OpenPecha/AF8DA5DC8
-A50DA6D86,MSV 1,05: Carmavastu,https://github.com/OpenPecha/A50DA6D86
-A7C4E5A23,MSV 1,07: Cīvaravastu,https://github.com/OpenPecha/A7C4E5A23
-A57B74740,MSV 1,08: Kaṭhinavastu,https://github.com/OpenPecha/A57B74740
-ADBA4FD2E,MSV 1,09: Kośāmbakavastu,https://github.com/OpenPecha/ADBA4FD2E
-AC4FFBEBB,MSV 1,11: Pāṇḍulohitakavastu,https://github.com/OpenPecha/AC4FFBEBB
-A0104D527,MSV 1,14: Poṣadhasthāpanavastu,https://github.com/OpenPecha/A0104D527
-A003E3B4A,MSV 1,15: Śayanāsanavastu,https://github.com/OpenPecha/A003E3B4A
-A01133990,MSV 1,16: Adhikaraṇavastu,https://github.com/OpenPecha/A01133990
-A592829EE,MSV 1,17: Saṃghabhedavastu,https://github.com/OpenPecha/A592829EE
-A386BB49D,MSV 2,0: Prātimokṣasūtra,https://github.com/OpenPecha/A386BB49D
-A862DF696,MSV 3,0: Bhikṣuṇīprātimokṣa,https://github.com/OpenPecha/A862DF696
-A1E02418B,MSV 3,01: Bhikṣuṇīvibhaṅga,https://github.com/OpenPecha/A1E02418B
-A621FB141,MSV 4,00: Kṣudrakavastu,https://github.com/OpenPecha/A621FB141
-AA2B073D4,MSV 5,00: Uttaragrantha 1,https://github.com/OpenPecha/AA2B073D4
-A29676490,MSV 6,00: Uttaragrantha 2,https://github.com/OpenPecha/A29676490
-A20E08CDA,MSV 6,01: Upāliparipṛcchā,https://github.com/OpenPecha/A20E08CDA
-AB51AAAE9,MSV 6,02: Vinītakā,https://github.com/OpenPecha/AB51AAAE9
-A4577E68F,MSV 6,03: Ekottara,https://github.com/OpenPecha/A4577E68F
-A4C941119,MSV 6,04: Pañcaka,https://github.com/OpenPecha/A4C941119
-AD9AB8790,MSV 6,05: Ṣoḍaśaka,https://github.com/OpenPecha/AD9AB8790
-ABA6827F7,MSV 6,06: Nidāna,https://github.com/OpenPecha/ABA6827F7
-ADD4590B3,MSV 6,07: Muktaka,https://github.com/OpenPecha/ADD4590B3
-A7E6225AA,MSV 6,08: Kathāvastu,https://github.com/OpenPecha/A7E6225AA
-A150DB05F,MSV 6,09: Māṇavikā,https://github.com/OpenPecha/A150DB05F
-AA99EAE68,MSV 6,10: Mātṛkā,https://github.com/OpenPecha/AA99EAE68
-AE828E36C,MSV 7,00: Conclusion,https://github.com/OpenPecha/AE828E36C
-A6881805C,Saṅghabhedavastu,https://github.com/OpenPecha/A6881805C
-AEDA17DED,Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra,https://github.com/OpenPecha/AEDA17DED
-A7588482C,Asaṅga: Abhidharmasamuccaya,https://github.com/OpenPecha/A7588482C
-AEEC8E38E,Asaṅga: Triśatikāyāḥ Prajñāpāramitāyāḥ Kārikāsaptatiḥ,https://github.com/OpenPecha/AEEC8E38E
-AA1391555,Candrakīrti: Madhyamakāvatāra,https://github.com/OpenPecha/AA1391555
-A54FA5FEE,Nāgārjuna: Mūlamadhyamakakārikā,https://github.com/OpenPecha/A54FA5FEE
-ACB1BBB6A,Nāgārjuna: Ratnāvalī,https://github.com/OpenPecha/ACB1BBB6A
-AC620E93B,Nāgārjuna: Vigrahavyāvartanīvṛtti,https://github.com/OpenPecha/AC620E93B
-ADD2AF6D9,Śāntideva: Bodhicaryāvatāra,https://github.com/OpenPecha/ADD2AF6D9
-A09866486,Vasubandhu: Abhidharmakośabhāṣya,https://github.com/OpenPecha/A09866486
-A161A5BAF,Vasubandhu: Triṃśikāvijñapti,https://github.com/OpenPecha/A161A5BAF
-A1597E402,Viśeṣamitra: Vinayasaṃgraha,https://github.com/OpenPecha/A1597E402
-A6C16D19B,Mātṛceṭa: Śatapañcāśatka,https://github.com/OpenPecha/A6C16D19B
-A8A41F0AA,Mātṛceṭa: Varṇārhavarṇastotra,https://github.com/OpenPecha/A8A41F0AA
-A8BE3CAA1,Tārānamaskāraikaviṃśatistotra,https://github.com/OpenPecha/A8BE3CAA1
-A51C80D06,Aśvaghoṣa: Buddhacarita,https://github.com/OpenPecha/A51C80D06
-A90CC2643,Aśvaghoṣa: Saundarananda,https://github.com/OpenPecha/A90CC2643
-A62861870,TYKYN,https://github.com/OpenPecha/A62861870
-A04CF02CC,Schøyen Collection: Brāhmī, published,https://github.com/OpenPecha/A04CF02CC
-A33653380,Grammar of Buddhist Chinese,https://github.com/OpenPecha/A33653380
-AFDD4840F,Mahāvyutpatti with sGra sbyor bam po gñis pa,https://github.com/OpenPecha/AFDD4840F
-A31792366,Bodhisatvacaryānirdeśa,https://github.com/OpenPecha/A31792366
-AC7CF55BE,Kāśyapaparivarta,https://github.com/OpenPecha/AC7CF55BE
-AA0872978,Mañjuśrīvikrīḍitasūtra,https://github.com/OpenPecha/AA0872978
-A9008A8EB,Sarvadharmāpravṛttinirdeśa,https://github.com/OpenPecha/A9008A8EB
-ADDF0437B,Tathāgatagarbhasūtra,https://github.com/OpenPecha/ADDF0437B
-A75A01D4A,Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra,https://github.com/OpenPecha/A75A01D4A
-A0494A20A,Asaṅga/Maitreya: Ratnagotravibhāga,https://github.com/OpenPecha/A0494A20A
-A4A22F0D9,Dhammapada,https://github.com/OpenPecha/A4A22F0D9
-A45FF239A,Udānavarga,https://github.com/OpenPecha/A45FF239A
-A22923C79,Suvarṇavarṇāvadāna,https://github.com/OpenPecha/A22923C79
-
+A2DFAA4F5,Akṣayamatinirdeśa,https://github.com/OpenPecha/A2DFAA4F5
+AB993211B,Aṣṭasāhasrikā Prajñāpāramitā,https://github.com/OpenPecha/AB993211B
+AF9F8A68C,Bhaiṣajyagurupūrvapraṇidhānasūtra,https://github.com/OpenPecha/AF9F8A68C
+AA08A0C48,Bodhisatvacaryānirdeśa,https://github.com/OpenPecha/AA08A0C48
+ABDDA2BAC,Bodhisatvapiṭaka,https://github.com/OpenPecha/ABDDA2BAC
+AE8E10EB0,Brahmaśrīvyākaraṇa,https://github.com/OpenPecha/AE8E10EB0
+A4E69E683,BA: Proto-BA (Buddhanāmanirdeśa),https://github.com/OpenPecha/A4E69E683
+ACCB5D929,BA: Daśabhūmikasūtra,https://github.com/OpenPecha/ACCB5D929
+AE7EC8374,Drāmiḍāvidyārājā,https://github.com/OpenPecha/AE7EC8374
+A7FDA30AA,Gaganagañjaparipṛcchā,https://github.com/OpenPecha/A7FDA30AA
+AE305E919,BA: Gaṇḍavyūhasūtra,https://github.com/OpenPecha/AE305E919
+A553BBAF8,Gaṅgottaraparipṛcchā,https://github.com/OpenPecha/A553BBAF8
+A7A09C185,Kāśyapaparivarta,https://github.com/OpenPecha/A7A09C185
+A1B5B4BCF,Laṅkāvatārasūtra,https://github.com/OpenPecha/A1B5B4BCF
+ADDB7A8D2,Maitreyavyākaraṇa,https://github.com/OpenPecha/ADDB7A8D2
+AC850EC59,Mañjuśrīvikrīḍitasūtra,https://github.com/OpenPecha/AC850EC59
+A6B690DA6,Nirvikalpapraveśadhāraṇī,https://github.com/OpenPecha/A6B690DA6
+A67617C8B,Pratyutpannabuddhasamādhisūtra,https://github.com/OpenPecha/A67617C8B
+A342C3E33,Ratnaguṇasaṃcayagāthā,https://github.com/OpenPecha/A342C3E33
+ACA0CFB4E,Saddharmapuṇḍarīka,https://github.com/OpenPecha/ACA0CFB4E
+A06367672,Sarvadharmāpravṛttinirdeśa,https://github.com/OpenPecha/A06367672
+A499A0890,Tathāgatagarbhasūtra,https://github.com/OpenPecha/A499A0890
+ADF0F4DA3,Vajracchedikā Prajñāpāramitā,https://github.com/OpenPecha/ADF0F4DA3
+AB43B8E1E,Vimalakīrtinirdeśa,https://github.com/OpenPecha/AB43B8E1E
+A3BDD4E36,BA: Proto-BA (Buddhanāmanirdeśa),https://github.com/OpenPecha/A3BDD4E36
+A9FD1DE8C,BA: Gaṇḍavyūhasūtra,https://github.com/OpenPecha/A9FD1DE8C
+AF956E6E6,MSV 1 00: Vinayavastūddāna,https://github.com/OpenPecha/AF956E6E6
+A4A0A838A,MSV 1 01: Pravrajyāvastu,https://github.com/OpenPecha/A4A0A838A
+A746EB42D,MSV 1 02: Poṣadhavastu,https://github.com/OpenPecha/A746EB42D
+A4E349CD0,MSV 1 03: Pravāraṇāvastu,https://github.com/OpenPecha/A4E349CD0
+A9C50DEE1,MSV 1 04: Varṣāvastu,https://github.com/OpenPecha/A9C50DEE1
+A58B6A018,MSV 1 05: Carmavastu,https://github.com/OpenPecha/A58B6A018
+AE4241FFD,MSV 1 07: Cīvaravastu,https://github.com/OpenPecha/AE4241FFD
+A5A5C40A2,MSV 1 08: Kaṭhinavastu,https://github.com/OpenPecha/A5A5C40A2
+A5F58542F,MSV 1 11: Pāṇḍulohitakavastu,https://github.com/OpenPecha/A5F58542F
+A195B8B22,MSV 1 14: Poṣadhasthāpanavastu,https://github.com/OpenPecha/A195B8B22
+AA52E0393,MSV 2 0: Prātimokṣasūtra,https://github.com/OpenPecha/AA52E0393
+A45C1779C,MSV 6 09: Māṇavikā,https://github.com/OpenPecha/A45C1779C
+A870F3F85,MSV 6 10: Mātṛkā,https://github.com/OpenPecha/A870F3F85
+ABE017542,Saṅghabhedavastu,https://github.com/OpenPecha/ABE017542
+A41EB614D,Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra,https://github.com/OpenPecha/A41EB614D 
+AA0C8E08A,Asaṅga/Maitreya: Ratnagotravibhāga,https://github.com/OpenPecha/AA0C8E08A 
+A80FDF787,Asaṅga: Abhidharmasamuccaya,https://github.com/OpenPecha/A80FDF787
+A24CC94CC,Asaṅga: Triśatikāyāḥ Prajñāpāramitāyāḥ Kārikāsaptatiḥ,https://github.com/OpenPecha/A24CC94CC
+A90959A54,Candrakīrti: Madhyamakāvatāra,https://github.com/OpenPecha/A90959A54
+A464F28F2,Nāgārjuna: Mūlamadhyamakakārikā,https://github.com/OpenPecha/A464F28F2
+A10D8F129,Nāgārjuna: Ratnāvalī,https://github.com/OpenPecha/A10D8F129
+AA647CE7E,Nāgārjuna: Vigrahavyāvartanīvṛtti,https://github.com/OpenPecha/AA647CE7E
+AAADAD181,Śāntideva: Bodhicaryāvatāra,https://github.com/OpenPecha/AAADAD181
+A42772329,Dhammapada,https://github.com/OpenPecha/A42772329
+AA9594480,Udānavarga,https://github.com/OpenPecha/AA9594480
+A97CC4C2C,Vasubandhu: Abhidharmakośabhāṣya,https://github.com/OpenPecha/A97CC4C2C
+A325CF755,Vasubandhu: Triṃśikāvijñapti,https://github.com/OpenPecha/A325CF755
+A14C47C9A,Viśeṣamitra: Vinayasaṃgraha,https://github.com/OpenPecha/A14C47C9A
+ADDFDDFFD,Mātṛceṭa: Śatapañcāśatka,https://github.com/OpenPecha/ADDFDDFFD
+AD6468D30,Mātṛceṭa: Varṇārhavarṇastotra,https://github.com/OpenPecha/AD6468D30
+ADFA46064,Tārānamaskāraikaviṃśatistotra,https://github.com/OpenPecha/ADFA46064
+A0554C666,Aśvaghoṣa: Buddhacarita,https://github.com/OpenPecha/A0554C666
+A00BCB01B,Aśvaghoṣa: Saundarananda,https://github.com/OpenPecha/A00BCB01B
+A6BC84EF8,Suvarṇavarṇāvadāna,https://github.com/OpenPecha/A6BC84EF8
+A12BF6221,Grammar of Buddhist Chinese,https://github.com/OpenPecha/A12BF6221
+ABC86DC55,Mahāvyutpatti with sGra sbyor bam po gñis pa,https://github.com/OpenPecha/ABC86DC55
+A3740E547,Dīrghāgama sūtras no. 35-41,https://github.com/OpenPecha/A3740E547
+AEE4A474C,Khaḍgaviṣāṇasūtra,https://github.com/OpenPecha/AEE4A474C
+AD43A6F1F,Prajñāpāramitāhṛdayasūtra,https://github.com/OpenPecha/AD43A6F1F
+AB3C3F036,BA: Daśabhūmikasūtra,https://github.com/OpenPecha/AB3C3F036
+A7B7B3C92,TYKYN,https://github.com/OpenPecha/A7B7B3C92
