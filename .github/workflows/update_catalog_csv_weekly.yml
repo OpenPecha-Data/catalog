@@ -66,7 +66,15 @@ jobs:
             authed_remote_url = f"{old_url[0]}//{org}:{token}@{old_url[1]}"
             repo.remote().set_url(authed_remote_url)
 
-
+        def update_repo(g, pecha_id, file_path, commit_msg, new_content):
+            try:
+                repo = g.get_repo(f"Openpecha-Data/{pecha_id}")
+                contents = repo.get_contents(f"{file_path}", ref="master")
+                repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
+                print(f'{pecha_id} update completed..')
+            except:
+                print('Repo not found')
+                
         def add_new_row_to_catalog(g, repo_path,repo_list):
             for _, info in repo_list.items():
                 pecha_id = info['repo']
@@ -162,8 +170,7 @@ jobs:
             repos_in_catalog = get_repos_in_catalog(repo_path)
             repo_names = get_repo_names(g, repos_in_catalog)
             add_new_row_to_catalog(g, repo_path, repo_names)
-            repo = Repo(repo_path)
-            setup_auth(repo, "Openpecha-Data", token)
-            commit(repo,commit_msg, branch="master")
+            new_content = Path(f"{repo_path}/data/catalog.csv}").read_text(encoding='utf-8')
+            update_repo(g, "catalog", "data/catalog.csv", commit_msg, new_content)
             print(f"{repo_path.stem} is updated")
       shell: python
