@@ -170,7 +170,7 @@ jobs:
             repos_in_catalog = get_repos_in_catalog(repo_path)
             repo_names = get_repo_names(g, repos_in_catalog)
             add_new_row_to_catalog(g, repo_path, repo_names)
-            new_content = Path(f"{repo_path}/data/catalog.csv}").read_text(encoding='utf-8')
+            new_content = Path(f"{repo_path}/data/catalog.csv").read_text(encoding='utf-8')
             update_repo(g, "catalog", "data/catalog.csv", commit_msg, new_content)
             print(f"{repo_path.stem} is updated")
       shell: python
