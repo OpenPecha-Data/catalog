@@ -49,7 +49,7 @@ jobs:
                 pecha_id = info['repo']
                 if pecha_id[0] == "I" or pecha_id[0] == "P":
                     try:
-                        repo = g.get_repo(f"Openpecha/{pecha_id}")
+                        repo = g.get_repo(f"Openpecha-Data/{pecha_id}")
                         contents = repo.get_contents(f"{pecha_id}.opf/meta.yml")
                         meta_content = contents.decoded_content.decode()
                         metadata = yaml.safe_load(meta_content)
@@ -64,14 +64,14 @@ jobs:
                     title = None
                 if title == None:
                     if work_id == None:
-                        row = f"[{pecha_id}](https://github.com/OpenPecha/{pecha_id}),,,,\n"
+                        row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),,,,\n"
                     else:
-                        row = f"[{pecha_id}](https://github.com/OpenPecha/{pecha_id}),,,,{work_id}\n"
+                        row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),,,,{work_id}\n"
                 else:
                     if work_id != None:
-                        row = f"[{pecha_id}](https://github.com/OpenPecha/{pecha_id}),{title},,,{work_id}\n"
+                        row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),{title},,,{work_id}\n"
                     else: 
-                        row = f"[{pecha_id}](https://github.com/OpenPecha/{pecha_id}),{title},,,\n"
+                        row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),{title},,,\n"
                 with open(f"{repo_path}/data/catalog.csv", "a", encoding='utf-8') as csvfile:
                     csvfile.write(row)
 
