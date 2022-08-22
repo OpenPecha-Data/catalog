@@ -1,8 +1,9 @@
 name: update catalog every sunday
 
 on:
-  schedule:
-    - cron: "0 0 * * SUN"
+  push
+#   schedule:
+#     - cron: "0 0 * * SUN"
     
 jobs:
   build:
@@ -118,7 +119,7 @@ jobs:
             return "master"
 
 
-        def download_repo(repo_name, out_path=None, branch="main"):
+        def download_repo(repo_name, out_path=None, branch="master"):
             pecha_url = f"{config['OP_ORG']}/{repo_name}.git"
             out_path = Path(out_path)
             out_path.mkdir(exist_ok=True, parents=True)
