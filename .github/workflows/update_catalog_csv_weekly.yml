@@ -1,9 +1,8 @@
 name: update catalog every sunday
 
 on:
-  push
-#   schedule:
-#     - cron: "0 0 * * SUN"
+  schedule:
+    - cron: "0 0 * * SUN"
     
 jobs:
   build:
@@ -43,7 +42,7 @@ jobs:
                 repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
                 print(f'{pecha_id} update completed..')
             except Exception as e:
-                print(e)
+                print("catalog repo not found due to {e}")
                 
         def add_new_row_to_catalog(g, repo_path,repo_list):
             for _, info in repo_list.items():
@@ -54,9 +53,9 @@ jobs:
                         contents = repo.get_contents(f"{pecha_id}.opf/meta.yml")
                         meta_content = contents.decoded_content.decode()
                         metadata = yaml.safe_load(meta_content)
-                        source_metadata = metadata.get(['source_metadata'], '')
-                        work_id = source_metadata.get(['id'], '')
-                        title = source_metadata.get(['title'], "")
+                        source_metadata = metadata['source_metadata']
+                        work_id = source_metadata.get('id', "")
+                        title = source_metadata.get('title', "")
                     except:
                         work_id = None
                         title = None
