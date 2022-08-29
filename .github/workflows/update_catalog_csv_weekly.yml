@@ -99,7 +99,6 @@ jobs:
                         }
                         repo_names.update(curr_repo)
                         curr_repo = {}
-                        print(repo_name)
             return repo_names
 
 
