@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "buda-nexus-pedurma",
+    "private_key_id": "a39a19693dfd4aecf26f0b8a6c1d881254ff3fde",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCHaXkflNfRwlU0\nl3gtpgo+09o/ALFJG0zksrfNYTXJSbtsgeCBst1G/9+/q7NmMTC+veDovKiVPxFy\n8Qnac8brioimyyqXqobXdSTPDv1xUSvCdsAQ3F4OaSCntzMk0YNJF8zKhrt4O7Rm\nJSH1Al4NiQCdr1nywbgtFR6bb9AlLDFoYLqhYp9nOdNE5/XWKokB9Zelkql0fA0K\nd4SD6DLr1kiuIg+Bun/K/ZibWtVaPXu5NRP2o+T5TRSi5Bw2hlKK4UqTuxgn86h/\n+TRC1DKYyH6b4wUr3og6NyK5C4Oyu1QzoeEIM+XYMNodkM8Hi5oWYKn0Yq7ECyCn\nuCpOD0pdAgMBAAECggEABaTyGUynPVVUH2PT7NUvtqQ2g+tHuIQkjaDcc/liGFCU\nOSblwIo/2nqGbVMfIHqa7Ux1YEYi4cu18rxU3I/4Ye+NmCQ+U4GWass1fFMD4fIP\n+KRiB6Hj4sZjh9IlVdrM1eJh1SxOCqo0cBCKrI+Lc5V7GteJEIseHfT0KGb9/lqc\ndA4kjFn3i+T9PXekG1DJox5oAja+X5GEhmf7GHQSOyW6Lo79F5tJCSEi5hCNvi6I\ntUF5A2kAy30inUYsYyXc3qZIobBfFvNewdCWUM8UkumD7q5BwMPE3yaW9qoKkQy0\nq3BpWG+T3YeEhZDt49HbLroAtiBv08xg9YpONga+UQKBgQC6R/td3j5/w0Wc4YXa\nJLrxUz9QL+zTNV+YslvR97+4zs/+HLl7zJQLxXMu/qjA30EQSXF18qXUkttj1rmh\n1LVXpzzvzCSUtD8ANmmQTiVKhhvSk5WBc8NZeb+O5+miXPUlWAL64vwtNvpWCrjF\nOBlivnMZ/zKL0OiPDE3qWUDcDQKBgQC6F5ny8AczB09D6Q1ihUicxnDTdIvkyiTz\nPQxOEfDjVReY6JehT3u38rAzGWiOkO+LY5CEv16jq65WKYwWmD1zcxoaEtDM2IVi\nGkAu5RD87LxiKxlwmYfCc2RVB2pAce7JeHEF+aX+M5R1TlUsJ/tRXUyRy+TFtPXv\n9ca4iJiDkQKBgC0A4OiPnbfOHE5HacgG4acVvpEH0wY/ucWxKV+zo/zo8fTpSaJw\nDUA+xpIO8gQOq7Bcne2p3ohZpmkbYiOHuPvhKmaggiHu3d2WR7CWQIodljEseI0a\nw5IlSLMkshwIqy0Hc0jbd6MQyi/pTTRQVkm1yyb3sWV35gdRKK26PGItAoGAQi4g\njtg0Bz7DPsiD/RSfdTnRaDIbijsllueQF7ejroVVhgi53CFTQ2DortOLbqA2wKCh\nBcS1GIn2zyepbWOo/wThNIKahS8/iFsDlmnad8iNWnAvdO706/9zoBWqAM9D95yA\nvXpCQTwAwRMhkTmK1C3VDEixzGoFyNfkWz4g1zECgYBlMGoJGvxDTAqGR5NuC1HW\ni3A3l1D0t29CtSZpbTBANaB3KP6tYmWvwnGZxR5edNQHKNs/kDbY/JZOML+UrHF0\nKZpQrsIhmVr+eXdjR9KlIcTdIwlj6zp/hvxp9iHc3TgCiWb/t7Pnqu4ayjBB2tzO\nCtSmIf/eyBbOTIXtHSXCeA==\n-----END PRIVATE KEY-----\n",
+    "client_email": "buda-nexus@buda-nexus-pedurma.iam.gserviceaccount.com",
+    "client_id": "116294822522355268336",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/buda-nexus%40buda-nexus-pedurma.iam.gserviceaccount.com"
+}

@@ -2,92 +2,23 @@ import re
 import requests
 import yaml
 import os
+import shutil
 import csv
 from pathlib import Path
 from git import Repo
 from github import Github
+from openpecha.utils import load_yaml, dump_yaml
 
 
 config = {
     "OP_ORG": "https://github.com/Openpecha-Data"
     }
 
-def update_repo(g, pecha_id, file_path, commit_msg, new_content):
-    try:
-        repo = g.get_repo(f"Openpecha-Data/{pecha_id}")
-        contents = repo.get_contents(f"{file_path}", ref="master")
-        repo.update_file(contents.path, commit_msg , new_content, contents.sha, branch="master")
-        print(f'{pecha_id} update completed..')
-    except Exception as e:
-        print("catalog repo not found due to {e}")
-        
-def add_new_row_to_catalog(g, repo_path,repo_list):
-    for _, info in repo_list.items():
-        pecha_id = info['repo']
-        if pecha_id[0] == "I" or pecha_id[0] == "P":
-            try:
-                repo = g.get_repo(f"Openpecha-Data/{pecha_id}")
-                contents = repo.get_contents(f"{pecha_id}.opf/meta.yml")
-                meta_content = contents.decoded_content.decode()
-                metadata = yaml.safe_load(meta_content)
-                source_metadata = metadata['source_metadata']
-                work_id = source_metadata.get('id', "")
-                title = source_metadata.get('title', "")
-            except:
-                work_id = None
-                title = None
-        else:
-            work_id = None
-            title = None
-        if title == None:
-            if work_id == None:
-                row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),,,,\n"
-            else:
-                row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),,,,{work_id}\n"
-        else:
-            if work_id != None:
-                row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),{title},,,{work_id}\n"
-            else: 
-                row = f"[{pecha_id}](https://github.com/Openpecha-Data/{pecha_id}),{title},,,\n"
-        with open(f"{repo_path}/data/catalog.csv", "a", encoding='utf-8') as csvfile:
-            csvfile.write(row)
-
-
-def get_repo_names(g, repos_in_catalog):
-    repo_names = {}
-    curr_repo = {}
-    repo_list = ["catalog","users","ebook-template","alignments","openpecha-template"
-                    "collections","data-translation-memory",
-                "openpecha-toolkit", "openpecha.github.io", "Transifex-Glossary", 
-                "W00000003","works","works-bak", ".github"]
-    num = 0
-    for repo in g.get_user("Openpecha-Data").get_repos():
-        repo_name = repo.name
-        if repo_name in repo_list:
-            continue
-        else:
-            if repo_name in repos_in_catalog:
-                continue
-            else:
-                num += 1
-                curr_repo[num] = {
-                    "repo": repo_name
-                }
-                repo_names.update(curr_repo)
-                curr_repo = {}
-    return repo_names
-
-
-def get_repos_in_catalog(repo_path):
-    repos_in_catalog = []
-    with open(f"{repo_path}/data/catalog.csv", newline="") as file:
-        pechas = list(csv.reader(file, delimiter=","))
-        for pecha in pechas[1:]:
-            pecha_id = re.search("\[.+\]", pecha[0])[0][1:-1]
-            repos_in_catalog.append(pecha_id) 
-    return repos_in_catalog 
-
-
+def clean_dir(path):
+    if path.is_dir():
+            shutil.rmtree(str(path))
+            
+            
 def get_branch(repo, branch):
     if branch in repo.heads:
         return branch
@@ -103,18 +34,47 @@ def download_repo(repo_name, out_path=None, branch="master"):
     repo = Repo(str(repo_path))
     branch_to_pull = get_branch(repo, branch)
     repo.git.checkout(branch_to_pull)
-    return repo_path      
+    return repo_path  
+
+            
+def get_metadata(g, pecha_id):
+    metadata = {}
+    if pecha_id[0] == "P" and len(pecha_id) == 7:
+        repo = g.get_repo(f"Openpecha-Data/{pecha_id}")
+        contents = repo.get_contents(f"{pecha_id}.opf/meta.yml")
+        meta_content = contents.decoded_content.decode()
+        metadata = yaml.safe_load(meta_content)
+    else:
+        file_path = Path(f"./pechas")
+        repo_path = download_repo(pecha_id, file_path)
+        meta_path = Path(f"{repo_path}/{repo_path.stem}.opf/meta.yml")
+        metadata = load_yaml(meta_path)
+    clean_dir(repo_path)
+    return metadata
+
+
+def get_pecha_dict(batch_path, g):
+    pecha_list = batch_path.read_text(encoding='utf-8')
+    for pecha_id in pecha_list:
+        metadata = get_metadata(g, pecha_id)
+        source_metadata = metadata["source_metadata"]
+        initial_creation_type = metadata['initial_creation_type']
+        if initial_creation_type == "ocr":
+            id = source_metadata['id']
+            title = source_metadata["title"]
+        elif initial_creation_type == "ebook":
+            id = source_metadata[""]
+            title = source_metadata["title"]
+    
 
 
 if __name__ == '__main__':
-    token = os.environ.get('SECRET')
+    token = ""
     g = Github(token)
-    commit_msg = "weekly catalog update done"
-    file_path = './'
-    repo_path = download_repo("catalog", file_path)
-    repos_in_catalog = get_repos_in_catalog(repo_path)
-    repo_names = get_repo_names(g, repos_in_catalog)
-    add_new_row_to_catalog(g, repo_path, repo_names)
-    new_content = Path(f"{repo_path}/data/catalog.csv").read_text(encoding='utf-8')
-    update_repo(g, "catalog", "data/catalog.csv", commit_msg, new_content)
-    print(f"{repo_path.stem} is updated")
+    batch_list = Path(f"./classify/csv_files/")
+    for batch_file in list(os.listdir(batch_list)):
+        batch_path = Path(f"{batch_list}/{batch_file}")
+        pecha_dict = get_pecha_dict(batch_path)
+        pecha_dict_path = Path(f"./classify/pecha_dicts/{batch_file[:-4]}.yml")
+        dump_yaml(pecha_dict, pecha_dict_path)
+    
