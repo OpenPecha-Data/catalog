@@ -1,6 +1,6 @@
 name: update catalog every sunday
 
-on: push
+on:
 #   schedule:
 #     - cron: "0 0 * * SUN"
     
