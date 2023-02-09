@@ -15,7 +15,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-      run: 'python -m pip install --upgrade pip pip install regex PyYAML python-csv requests PyGithub pathlib'
+      run: 'python -m pip install --upgrade pip pip install regex PyYAML python-csv requests PyGithub pathlib demjson3'
         
     - name: Update the catalog.csv
       env:
