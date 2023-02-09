@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+    - name: Set up Python '3.8.10'
+      uses: actions/setup-python@v3
       with:
-        python-version: '3.10'
+        python-version: '3.8.10'
     - name: Install dependencies
-      run: 'python -m pip install --upgrade pip pip install regex PyYAML python-csv requests PyGithub pathlib demjson3'
+      run: 'python -m pip install --upgrade pip pip install regex PyYAML python-csv requests PyGithub pathlib setuptool=56.0.0'
         
     - name: Update the catalog.csv
       env:
