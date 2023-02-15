@@ -33,7 +33,6 @@ jobs:
         import os
         import csv
         from pathlib import Path
-        from git import Repo
         from github import Github
 
 
