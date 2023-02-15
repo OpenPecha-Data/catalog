@@ -3,7 +3,7 @@ name: Update catalog every sunday
 on:
   push:
     branches:
-      - compare-the-above-two-lists-to-get-new-pecha-ids
+      - compare-the-above-two-lists-to-get-new-pecha_ids
 
 jobs:
   build:
@@ -29,4 +29,4 @@ jobs:
     - name: Update the catalog.csv
       env:
         SECRET: ${{secrets.GITHUB_TOKEN}}
-      run: python3 catalog.py
+      run: python catalog.py
