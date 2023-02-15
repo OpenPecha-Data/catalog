@@ -1,9 +1,6 @@
 name: Update catalog every sunday
 
-on:
-  push:
-    branches:
-      - compare-the-above-two-lists-to-get-new-pecha_ids
+on: [push]
 
 jobs:
   build:
