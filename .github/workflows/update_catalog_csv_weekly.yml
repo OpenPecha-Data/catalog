@@ -1,6 +1,8 @@
 name: Update catalog every sunday
 
-on: [push]
+on: 
+  schedule:
+    - cron: "0 0 * * SUN"
 
 jobs:
   build:
@@ -24,5 +26,19 @@ jobs:
      
     - name: Update the catalog.csv
       env:
-        SECRET: ${{secrets.GITHUB_TOKEN}}
+        SECRET: ${{secrets.ACCESS_TOKEN}}
       run: python catalog.py
+    
+    - name: Commit changes to the checked-out repository
+      run: |
+        # Commit changes to the checked-out repository
+        git config --global user.email "zakongjampa@gmail.com"
+        git config --global user.name "Jampa Dhondup"
+        git add .
+        git commit -m "Update file.txt"
+
+    - name: Push changes to the main repository
+      
+      run: |
+        # Push changes to the main repository
+        git push origin HEAD:main
