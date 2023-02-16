@@ -1,8 +1,6 @@
 name: Update catalog every sunday
 
-on: 
-  schedule:
-    - cron: "0 0 * * SUN"
+on: [push]
 
 jobs:
   build:
