@@ -13,8 +13,7 @@ jobs:
     steps:
     - name: Checkout code 
       uses: actions/checkout@v3
-      with:
-        ref: compare-the-above-two-lists-to-get-new-pecha_ids
+      
 
     - name: Set up Python 
       uses: actions/setup-python@v3
