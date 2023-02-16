@@ -127,7 +127,7 @@ def upload_changed_catalog(repo):
 
 
 if __name__ == "__main__":
-    token = os.environ.get('GitHubToken')
+    token = os.environ.get('SECRET')
     g = Github(token)
     repo = g.get_repo("OpenPecha-Data/catalog")
     catalog_csv = download_csv(repo)
