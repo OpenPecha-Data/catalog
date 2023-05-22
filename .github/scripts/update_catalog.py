@@ -5,40 +5,16 @@ import yaml
 import time
 import requests
 from datetime import datetime
-from github.GithubException import GithubException
 
-
-TOKEN = os.getenv("SECRET")
-ORG_NAME = "OpenPecha-Data"
-
-def get_meta(repo_name, meta_path):
-    branch = "master"
-    g = Github(TOKEN)
-    try:
-        repo = g.get_repo(f"{ORG_NAME}/{repo_name}")
-        file = repo.get_contents(meta_path, ref=branch)
-        file_content = file.decoded_content.decode('utf-8')
-        meta = yaml.safe_load(file_content)
-        return meta
-    except GithubException as e:
-        if e.status == 403 and 'rate limit' in e.data.get('message', ''):
-            rate_limit = g.get_rate_limit()
-            reset_time = rate_limit.core.reset.timestamp()
-            current_time = time.time()
-            wait_time = reset_time - current_time
-            if wait_time > 0:
-                print(f"Rate limit exceeded. Waiting for {wait_time:.2f} seconds until reset.")
-                time.sleep(wait_time)
-                return get_meta(repo_name, meta_path)
-            else:
-                print("Rate limit exceeded. Please try again later.")
-        else:
-            print("A GitHub API error occurred:", e)
-        return None
-    except Exception as e:
-        print("An error occurred:", e)
-        return None
-
+def get_meta(repo_name,meta_path):
+    branch="master"
+    token = os.getenv("SECRET")
+    g = Github(token)
+    repo = g.get_repo(f"OpenPecha-Data/{repo_name}")
+    file = repo.get_contents(meta_path, ref=branch)
+    file_content = file.decoded_content.decode('utf-8')
+    meta  = yaml.safe_load(file_content)
+    return meta
 
 
 def get_row(repo_name):
@@ -71,16 +47,25 @@ def add_new_row_to_catalog(repos,catalog_path):
             writer.writerow(row)
     
 
+def get_org_repos(g):
+    org_repos = []
+    org_name = 'OpenPecha-Data'  # Replace with the name of the organization
+    org = g.get_organization(org_name)  
+    repos = org.get_repos()
+    for repo in repos:
+        org_repos.append(repo.name)
+    return org_repos
 
-def get_all_repos():
+
+def get_all_repos(org_name, token):
     repos = []
     page = 1
     per_page = 100  # Number of repositories to retrieve per page
 
     while True:
         # Make a request to the GitHub API to retrieve repositories for the organization
-        url = f'https://api.github.com/orgs/{ORG_NAME}/repos?page={page}&per_page={per_page}'
-        headers = {'Accept': 'application/vnd.github.v3+json', 'Authorization': f'token {TOKEN}'}
+        url = f'https://api.github.com/orgs/{org_name}/repos?page={page}&per_page={per_page}'
+        headers = {'Accept': 'application/vnd.github.v3+json', 'Authorization': f'token {token}'}
         response = requests.get(url, headers=headers)
 
         # Handle rate limit exceeded error
@@ -101,7 +86,7 @@ def get_all_repos():
 
         # Add repositories to the list
         repos.extend([repo['name'] for repo in repositories])
-        print(repos)
+
         # Check if there are more pages to retrieve
         if len(repositories) < per_page:
             break
@@ -137,15 +122,16 @@ def get_new_repos(org_repos,opfs_in_catalog,opas_in_catalog):
 def main():
     opf_catalog_path = "opf_catalog.csv"
     opa_catalog_path = "opa_catalog.csv"
+    token = os.environ.get('SECRET')
+    org_name = "OpenPecha-Data"
     opfs_in_catalog = get_repos_in_catalog(opf_catalog_path)
     opas_in_catalog = get_repos_in_catalog(opa_catalog_path)
-    org_repos = get_all_repos()
+    org_repos = get_all_repos(org_name,token)
     new_opfs,new_opas = get_new_repos(org_repos,opfs_in_catalog,opas_in_catalog)
     add_new_row_to_catalog(new_opfs,opf_catalog_path)
     add_new_row_to_catalog(new_opas,opa_catalog_path)
 
 
 if __name__ == '__main__':
-    print(f"Token is: {TOKEN}")
     main()
     
