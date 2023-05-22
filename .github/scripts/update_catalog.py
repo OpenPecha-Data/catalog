@@ -8,7 +8,7 @@ from datetime import datetime
 from github.GithubException import GithubException
 
 
-TOKEN = os.getenv("TOPJOR_GITHUB_TOKEN")
+TOKEN = os.getenv("SECRET")
 ORG_NAME = "OpenPecha-Data"
 
 def get_meta(repo_name, meta_path):
