@@ -5,17 +5,38 @@ import yaml
 import time
 import requests
 from datetime import datetime
+from github.GithubException import GithubException
 
-def get_meta(repo_name,meta_path):
-    branch="master"
+
+def get_meta(repo_name, meta_path):
+    branch = "master"
     token = os.getenv("SECRET")
     token = token.replace("\n","")
     g = Github(token)
-    repo = g.get_repo(f"OpenPecha-Data/{repo_name}")
-    file = repo.get_contents(meta_path, ref=branch)
-    file_content = file.decoded_content.decode('utf-8')
-    meta  = yaml.safe_load(file_content)
-    return meta
+    try:
+        repo = g.get_repo(f"OpenPecha-Data/{repo_name}")
+        file = repo.get_contents(meta_path, ref=branch)
+        file_content = file.decoded_content.decode('utf-8')
+        meta = yaml.safe_load(file_content)
+        return meta
+    except GithubException as e:
+        if e.status == 403 and 'rate limit' in e.data.get('message', ''):
+            rate_limit = g.get_rate_limit()
+            reset_time = rate_limit.core.reset.timestamp()
+            current_time = time.time()
+            wait_time = reset_time - current_time
+            if wait_time > 0:
+                print(f"Rate limit exceeded. Waiting for {wait_time:.2f} seconds until reset.")
+                time.sleep(wait_time)
+                return get_meta(repo_name, meta_path)
+            else:
+                print("Rate limit exceeded. Please try again later.")
+        else:
+            print("A GitHub API error occurred:", e)
+        return None
+    except Exception as e:
+        print("An error occurred:", e)
+        return None
 
 
 def get_row(repo_name):
@@ -23,11 +44,15 @@ def get_row(repo_name):
     if repo_name.startswith(('A')):
         meta_path= f"{repo_name}.opa/meta.yml"
         meta = get_meta(repo_name,meta_path)
+        if meta is None:
+            return
         title = meta["title"] if "title" in meta.keys() else "----"
         row = [repo_name,title]
     elif repo_name.startswith(('P','I','O','D')):
         meta_path= f"{repo_name}.opf/meta.yml"
         meta = get_meta(repo_name,meta_path)
+        if meta is None:
+            return
         id = repo_name
         title = meta["title"] if "title" in meta.keys() else "----"
         volume = meta["volume"] if "volume" in meta.keys() else "----"
@@ -87,6 +112,7 @@ def get_all_repos(org_name, token):
 
         # Add repositories to the list
         repos.extend([repo['name'] for repo in repositories])
+        print(repos)
 
         # Check if there are more pages to retrieve
         if len(repositories) < per_page:
