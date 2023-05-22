@@ -52,6 +52,8 @@ def add_new_row_to_catalog(repos,catalog_path):
         writer = csv.writer(file)
         for repo in repos:
             row = get_row(repo)
+            if not row:
+                continue
             writer.writerow(row)
     
 
