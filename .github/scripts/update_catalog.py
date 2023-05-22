@@ -112,7 +112,6 @@ def get_all_repos(org_name, token):
 
         # Add repositories to the list
         repos.extend([repo['name'] for repo in repositories])
-        print(repos)
         print(f"Number of repos:{len(repos)}")
 
         # Check if there are more pages to retrieve
