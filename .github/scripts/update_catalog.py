@@ -133,5 +133,8 @@ def main():
 
 
 if __name__ == '__main__':
+    token = os.environ.get('SECRET')
+    print("len of token is")
+    print(len(token))
     main()
     
