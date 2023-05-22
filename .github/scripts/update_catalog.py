@@ -5,22 +5,21 @@ import yaml
 import time
 import requests
 from datetime import datetime
-from github.GithubException import GithubException
 
 
 def get_meta(repo_name, meta_path):
-    print(repo_name)
-    print(meta_path)
     branch = "master"
     token = os.getenv("SECRET")
     token = token.replace("\n","")
     g = Github(token)
-    repo = g.get_repo(f"OpenPecha-Data/{repo_name}")
-    file = repo.get_contents(meta_path, ref=branch)
-    file_content = file.decoded_content.decode('utf-8')
-    meta = yaml.safe_load(file_content)
-    return meta
-
+    try:
+        repo = g.get_repo(f"OpenPecha-Data/{repo_name}")
+        file = repo.get_contents(meta_path, ref=branch)
+        file_content = file.decoded_content.decode('utf-8')
+        meta = yaml.safe_load(file_content)
+        return meta
+    except:
+        return 
 
 def get_row(repo_name):
     row = []
