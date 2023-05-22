@@ -9,6 +9,8 @@ from github.GithubException import GithubException
 
 
 def get_meta(repo_name, meta_path):
+    print(repo_name)
+    print(meta_path)
     branch = "master"
     token = os.getenv("SECRET")
     token = token.replace("\n","")
