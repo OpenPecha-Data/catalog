@@ -92,7 +92,6 @@ def get_all_repos():
             continue
 
         # Handle other errors
-        print(f"Token is: {TOKEN}")
         if response.status_code != 200:
             print(f'Error occurred while fetching repositories: {response.status_code}')
             break
@@ -147,5 +146,6 @@ def main():
 
 
 if __name__ == '__main__':
+    print(f"Token is: {TOKEN}")
     main()
     
