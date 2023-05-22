@@ -9,7 +9,7 @@ from datetime import datetime
 def get_meta(repo_name,meta_path):
     branch="master"
     token = os.getenv("SECRET")
-    token.strip()
+    token = token.replace("\n","")
     g = Github(token)
     repo = g.get_repo(f"OpenPecha-Data/{repo_name}")
     file = repo.get_contents(meta_path, ref=branch)
@@ -124,7 +124,7 @@ def main():
     opf_catalog_path = "opf_catalog.csv"
     opa_catalog_path = "opa_catalog.csv"
     token = os.environ.get('SECRET')
-    token.strip()
+    token = token.replace("\n","")
     org_name = "OpenPecha-Data"
     opfs_in_catalog = get_repos_in_catalog(opf_catalog_path)
     opas_in_catalog = get_repos_in_catalog(opa_catalog_path)
