@@ -32,10 +32,11 @@ def get_value(dics,given_keys):
 def get_row(repo_name):
     row = []
     if repo_name.startswith(('A')):
+        print(repo_name)
         meta_path= f"{repo_name}.opa/meta.yml"
         meta = get_meta(repo_name,meta_path)
         if meta is None:
-            return
+            return [repo_name]
         source_metadata = meta["source_metadata"] if "source_metadata" in meta.keys() else {}
         title = get_value([meta],["title"])
         creation_date = get_value([source_metadata,meta],["creationdate","created_at"])
@@ -45,7 +46,7 @@ def get_row(repo_name):
         meta_path= f"{repo_name}.opf/meta.yml"
         meta = get_meta(repo_name,meta_path)
         if meta is None:
-            return
+            return [repo_name]
         source_metadata = meta["source_metadata"] if "source_metadata" in meta.keys() else {}
         id = repo_name
         title = get_value([source_metadata],["title"])
