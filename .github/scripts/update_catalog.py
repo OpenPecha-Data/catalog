@@ -34,9 +34,9 @@ def get_row(repo_name):
     if repo_name.startswith(('A')):
         meta_path= f"{repo_name}.opa/meta.yml"
         meta = get_meta(repo_name,meta_path)
-        source_metadata = meta["source_metadata"] if "source_metadata" in meta.keys() else {}
         if meta is None:
             return
+        source_metadata = meta["source_metadata"] if "source_metadata" in meta.keys() else {}
         title = get_value([meta],["title"])
         creation_date = get_value([source_metadata,meta],["creationdate","created_at"])
         last_update = get_value([source_metadata,meta],["last_modified","last_modified_at"])
@@ -62,9 +62,8 @@ def add_new_row_to_catalog(repos,catalog_path):
         writer = csv.writer(file)
         for repo in repos:
             row = get_row(repo)
-            if not row:
-                continue
-            writer.writerow(row)
+            if row:
+                writer.writerow(row)
     
 
 def get_org_repos(g):
