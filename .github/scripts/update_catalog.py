@@ -34,7 +34,7 @@ def get_row(repo_name):
     if repo_name.startswith(('A')):
         meta_path= f"{repo_name}.opa/meta.yml"
         meta = get_meta(repo_name,meta_path)
-        source_metadata = meta["source_metadata"]
+        source_metadata = meta["source_metadata"] if "source_metadata" in meta.keys() else {}
         if meta is None:
             return
         title = get_value([meta],["title"])
@@ -46,7 +46,7 @@ def get_row(repo_name):
         meta = get_meta(repo_name,meta_path)
         if meta is None:
             return
-        source_metadata = meta["source_metadata"]
+        source_metadata = meta["source_metadata"] if "source_metadata" in meta.keys() else {}
         id = repo_name
         title = get_value([source_metadata],["title"])
         author = get_value([source_metadata],["author"])
