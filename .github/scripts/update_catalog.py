@@ -21,29 +21,39 @@ def get_meta(repo_name, meta_path):
     except:
         return 
 
+def get_value(dics,given_keys):
+    for dic in dics:
+        for key in dic.keys():
+            if key.lower() in given_keys:
+                return dic[key]
+    
+    return  "-"
+
 def get_row(repo_name):
     row = []
     if repo_name.startswith(('A')):
         meta_path= f"{repo_name}.opa/meta.yml"
         meta = get_meta(repo_name,meta_path)
+        source_metadata = meta["source_metadata"]
         if meta is None:
             return
-        title = meta["title"] if "title" in meta.keys() else "----"
-        row = [repo_name,title]
+        title = get_value([meta],["title"])
+        creation_date = get_value([source_metadata,meta],["creationdate","created_at"])
+        last_update = get_value([source_metadata,meta],["last_modified","last_modified_at"])
+        row = [repo_name,title,creation_date,last_update]
     elif repo_name.startswith(('P','I','O','D')):
         meta_path= f"{repo_name}.opf/meta.yml"
         meta = get_meta(repo_name,meta_path)
         if meta is None:
             return
+        source_metadata = meta["source_metadata"]
         id = repo_name
-        title = meta["title"] if "title" in meta.keys() else "----"
-        volume = meta["volume"] if "volume" in meta.keys() else "----"
-        author = meta["author"] if "author" in meta.keys() else "----"
-        source_id = meta["soource_id"] if "source_id" in meta.keys() else "----"
-        legacy_id = meta["legacy_id"] if "legacy_id" in meta.keys() else  "----"
-        creation_date = meta["imported"] if "imported" in meta.keys() else "----"
-        last_update = meta["last_modified"] if "last_modified" in meta.keys() else "----"
-        row = [id,title,volume,author,source_id,legacy_id,creation_date,last_update]
+        title = get_value([source_metadata],["title"])
+        author = get_value([source_metadata],["author"])
+        source_id = get_value([source_metadata],["id"])
+        creation_date = get_value([meta,source_metadata] ,["imported","created","imported_at","created_at"]) 
+        last_update = get_value([meta,source_metadata] ,["last_modified","last_modified_at"]) 
+        row = [id,title,author,source_id,creation_date,last_update]
     return row
 
 
