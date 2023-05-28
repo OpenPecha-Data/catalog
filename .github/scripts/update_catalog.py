@@ -43,6 +43,7 @@ def get_row(repo_name):
         last_update = get_value([source_metadata,meta],["last_modified","last_modified_at"])
         row = [repo_name,title,creation_date,last_update]
     elif repo_name.startswith(('P','I','O','D')):
+        return
         meta_path= f"{repo_name}.opf/meta.yml"
         meta = get_meta(repo_name,meta_path)
         if meta is None:
