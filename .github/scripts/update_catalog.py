@@ -9,7 +9,7 @@ from datetime import datetime
 
 def get_meta(repo_name, meta_path):
     branch = "master"
-    #token = os.getenv("SECRET")
+    token = os.getenv("SECRET")
     token = token.replace("\n","")
     g = Github(token)
     try:
