@@ -1,6 +1,9 @@
 name: update catalog every sunday
 
-on: push
+on:
+  issues:
+    types:
+      - opened
 
 jobs:
   build:

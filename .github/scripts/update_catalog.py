@@ -114,6 +114,7 @@ def get_all_repos(org_name, token):
 
         # Increment the page number for the next request
         page += 1
+        time.sleep(5)
 
     return repos
 
