@@ -1,9 +1,8 @@
 name: update catalog every sunday
 
 on:
-  issues:
-    types:
-      - opened
+  schedule:
+    - cron: "0 0 * * SUN"
 
 jobs:
   build:
